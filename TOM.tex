@@ -1,0 +1,1323 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\usepackage[margin=1.0in]{geometry}
+
+
+\usepackage{float}
+
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{natbib}
+%\usepackage{amsthm,amsfonts,amsopn,amsmath,amssymb,epsfig,graphics,verbatim,natbib}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{xtab}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{chngpage}
+\usepackage{gensymb}
+\usepackage{threeparttable}
+\usepackage{caption}
+\usepackage{eurosym}
+
+\usepackage{sectsty}
+\sectionfont{\large}
+\usepackage[bottom]{footmisc}
+\usepackage{lmodern}
+\usepackage[none]{hyphenat}
+\interfootnotelinepenalty=100000
+\sloppy
+\setcounter{MaxMatrixCols}{10}
+
+
+\usepackage [english]{babel}
+\usepackage{array}
+\usepackage{appendix}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+\AtBeginEnvironment{subappendices}{%
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+}
+
+\renewcommand\thesection{\arabic{section}}
+
+\renewcommand{\baselinestretch}{1.5}
+%-------------------------------------------
+\hyphenchar\font=-1
+
+
+\usepackage{changes}
+
+
+\usepackage{lmodern,blindtext}
+
+\usepackage{longtable}
+
+
+\begin{document}
+
+\title{Energy Performance Certification and \\Time on the Market}
+\author{Erdal Aydin\thanks{\scriptsize Sabanci University, Turkey; erdalaydin@sabanciuniv.edu}\ \ \ Santiago Boh\'{o}rquez Correa\thanks{\scriptsize \noindent Corresponding author. Tilburg University, The Netherlands; s.bohorquezcorrea@tilburguniversity.edu}\ \ \ Dirk Brounen\thanks{\scriptsize  \noindent Tilburg University, The Netherlands; d.brounen@tilburguniversity.edu.tr} \thanks{\scriptsize \noindent  The authors are grateful to Franz Fuerst, Nils Kok, participants at the TSC Seminar at Tilburg University, as well as the editor and two anonymous reviewers, for their helpful comments.}}
+
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\footnotesize
+
+\noindent This paper analyzes whether energy performance certificates (EPCs) serve as means to reduce the information asymmetry among market participants during the sale of homes. Using a sample of 876,000 single-family homes in the Netherlands, we examine the impact of EPC adoption on the speed of sale. Our results indicate that energy-rated homes sell faster than non-energy-rated homes, an effect that varies by 7-12 percent depending on model specifications and increases when positive (green) ratings are granted. The information conveyed by these certificates reduces the information asymmetry between buyers and sellers, which helps to reduce the uncertainty of quality.
+ 
+
+\bigskip
+
+{ \noindent  \textit{JEL Codes: }D12, Q51, R21}
+\smallskip
+
+\vspace{-1ex}{ \noindent \textit{Keywords:} energy performance certificate, information assymmetry, housing market, time on the market, energy effciiency}
+\end{abstract}
+
+
+
+\newpage
+
+\section{Introduction}
+
+Energy conservation has been a hot topic of debate among policy makers and academics due to concerns about global climate change and energy dependency. From a policy perspective, the building sector has been an important target for energy conservation policies as it is a major contributor to total energy consumption and has high potential for saving energy through efficiency measures. Buildings account for 40 percent of total energy consumption and for 36 percent of CO2 emissions in the EU \citep{intergovernmental2007climate}, and much of the EU energy policy has been designed to stimulate the public awareness regarding residential energy efficiency and to trigger future investments in energy efficiency. 
+
+On January 4, 2003, the European Parliament ratified the Energy Performance of Buildings Directive (EPBD), a legal act inspired by the Kyoto Protocol and designed to help the European Union (EU) to reduce its CO2 emissions. The directive states that ``Member states shall ensure that, when buildings are constructed, sold or rented out, an energy performance certificate is made available by the owner to the prospective buyer or tenant". In other words, EPCs were designed and introduced to increase the informational transparency regarding the current energy efficiency of buildings, and to help buyers and tenants make well-informed decisions in the real estate market.
+
+Within national housing markets, EPCs have been introduced as carriers of price-relevant information. In the Netherlands, the average monthly utility bill of a standard home was 150 euros in 2015, which represents 21 percent of the average mortgage due every month. In other words, energy bills matter, especially considering that these bills range between 55 and 345 euros across A- to G-labeled homes of similar size. Until recently, this variation in energy efficiency of homes was mostly unknown to prospective buyers, and therefore absent in the process of price formation. In line with \cite{akerlof1970vthe}, it is expected that EPCs can serve as a means for reducing this informational asymmetry between sellers and buyers, which is one of the aims of energy policy (see \cite{gayer2013overriding} and \cite{mannix2015limits}). \cite{houde2014consumers} showed that energy certification can act as a reliable substitute for more accurate, but complex, energy information. 
+
+The EPC information is hypothesized to affect transaction prices, as the implied outlook on future user costs is discounted into the price buyers are willing to bid today. Thus far, this price effect of EPCs in the housing market has been evaluated in the academic literature by empirical studies that have measured the capitalization of energy efficiency in transaction prices. Starting with \cite{eichholtz2010doing}, who reported the first evidence of the economic value of ``green building" in the US office market, a body of literature emerged offering comparable results for different parts of the real estate market (see \citealp{brounen2011economics,fuerst2015does,kahn2014capitalization,walls2017energy}). 
+
+However, prices are not the only channel through which transactions are affected by informational asymmetries. \cite{taylor1999time} identified unrevealed information as an explanation for homes not being sold. Buying a home requires a significant financial commitment of households, and the suspicion of unrevealed information is likely to scare off weary buyers, thereby slowing down the sales process. Hence, information can affect transactions through both the price and the speed of the sale. Enhancing the speed of sale could be an important argument with which policymakers can both stimulate and enforce the use of energy labeling among home-owners, a consumer group that thus far has been slow in adopting the proposed policy measures regarding residential energy efficiency. By stressing the combined effects on transaction prices and the speed of sale, EPCs can be better used to contribute to the realization of climate goals, as home owners will be positively nudged to improve the residential energy efficiency for their own benefits.  
+
+In this paper, we empirically assess the EPCs effectiveness as carriers of information by examining the effects of EPCs on the time on the market (TOM) of housing transactions. We study the Dutch housing market, as the Netherlands was one of the first countries in 2008 to adopt EPCs in the housing market on a national scale. This early adoption creates a rich data setting, as Dutch EPCs have been around for almost 10 years. Another advantage of using the Dutch data set is that the design of EPCs has changed over time. The first-generation EPCs resulted from a detailed on-site survey of the dwelling by a trained engineer, while the later, indicative labels have been modeled as a simple function of dwelling age. This change in the quality of the conveyed information is part of our research design. Finally, the Dutch housing market offers a blend of various high-quality micro-data sources, capturing dwelling characteristics and EPC details.
+
+Our results for the period 2008 - 2016 indicate that EPC information effectively enhances the speed of sale, as time on the market decreases when the EPC is available. The reduction in TOM varies from 7 to 12 percent, depending on model specifications and estimation approaches. In all cases, the effect is significant and increases as labels are provided earlier during the sale process and ratings are higher. We also document that the shift in EPC regimes, switching from certificates that required an on-site assessment to indicative labels based primarily on dwelling age, reduces the power of the signal by almost 50 percent.
+
+This paper contributes to the growing literature on how informational nudges have effects on consumer behavior (see \citealp{allcott2016role, camerer2003regulation, thaler2003libertarian}). Although there has been extensive research on how energy information can affect consumer behavior (see \citealp{allcott2011social, momsen2014intention, codagnone2016labels}, among others), there is still a gap in terms of evaluating whether the existing regulation on energy efficiency information provision adequately addresses the imperfect information problem \citep{allcott2016paternalism}. Our paper shows that consumers not only react to that information, but that they are also capable of distinguishing how much information is revealed by EPCs. An important result that can be used to enhance the effectiveness of energy policies targeting home owners during the decisive sale process of homes. Moreover, we also demonstrate that the calibration of the residential EPC schemes matter. Our results show that while the current energy directive issuing indicative labels is useful in augmenting the uptake rate of EPCs in the housing market, but at the same time, these indicative labels do not reduce the asymmetry between buyer and seller as much as the on-site assessment by trained engineers.
+
+The paper continues with a discussion of our theoretical framework on information asymmetries, followed by a discussion of the Dutch housing market and corresponding EPC system. In Section 4, we present the data used in our empirical analysis. We then discuss our methodology and results and conclude with a summary of our main findings and their implications.
+
+\section{Information Asymmetry in the Housing Market} 
+
+Homes are valuable but illiquid assets, with significant informational asymmetries, as sellers have more information about their homes than prospective buyers. The success of a home transaction depends on the combination of the appropriate sales price and the  speed of sale. Sellers typically strive for a quick sale at the highest possible transaction price. \cite{taylor1999time} showed that while prices can be boosted by not disclosing all negative attributes, buyers shy away from homes for which relevant qualities are unknown. Buyers prefer to bid on homes with more complete information – even if that information is not necessarily positive – as they want to be protected from having to undertake time-consuming activities to retrieve this information. This adaptation from \cite{akerlof1970vthe}'s Lemon's problem to the housing market predicts that the speed of sale increases with the supply of information. Given that up until 2008 energy efficiency was not part of the standard information process in the Dutch housing market, it is safe to say that since the introduction of Dutch EPC in 2008, this supply of information increased as a result. Energy labels have provided prospective buyers with clear and simple information regarding the relative energy use of their next home. Based on this additional information, buyers became better positioned to take this information into account when comparing alternative homes, and when entering price negotiations.   
+
+As a theoretical framework, we modify the \cite{taylor1999time} model to identify the effects of energy efficiency information on the time that a home is on the market. Suppose an individual (seller) owns a house that she wishes to sell. There is also an infinite pool of individuals (buyers) who are potentially interested in purchasing the house. The ex-post value of the house for consumer $i$ is $q \theta^i$, where $q$ is a house-specific characteristic (quality) and $\theta^i$ is a consumer-specific characteristic (taste). The value of the house for the seller is  $q \theta^s$. The seller is presumed to know the quality, but not the realizations of consumer tastes. It is common knowledge that each $\theta^i$ is the realization of an independent draw from the distribution $F(\theta)$, while the quality and seller's valuation is unknown to the buyers and is costly to find out. 
+
+We assume that the utility of seller depends both on the speed of sale (TOM) and the price of the transaction, so she has a utility of the form:
+
+\begin{equation}
+U^s = \mathrm{e}^{\rho t} TP
+\end{equation}
+
+\noindent where $TP$ is the transaction price and $\rho$ is the discount factor. We also assume that the buyers' arrival rate follows a Poisson process with rate $\lambda$. Buyers and sellers enter price negotiation on a first-come-first-served basis, and all buyers who come during the negotiation period are blocked and discarded.\footnote{This assumption is made to avoid unnecessary mathematical complications with buyers waiting in line that would not alter our main results (see \citealp{ross2014introduction}).}
+
+To simplify the model, we assume that there is one quality inspection that sellers can opt into before putting their house on the market, and the results are made available to the buyers. The houses with that inspection have a leave rate of $\mu_1$ and houses without it have a rate of $\mu_2$, where $\mu_1 > \mu_2$, the speed of negotiation depends on how much information about the house needs to be gathered by the buyer before making a final offer. Thus, if more information about the house is publicly available, then the leave rate will be higher. So the mean time spent bargaining is $\frac{1}{\mu_1} < \frac{1}{\mu_2}$. Negotiation is successful with probability 1 if $\theta^s < \theta^i$, and 0 otherwise. That is, we assume that negotiation will always succeed if the seller’s valuation is lower than that of the buyers and the delay only lasts until they agree on a price. If the negotiation is not successful, then the seller puts the house on the market again and waits for the next offer. From these previous conditions we conclude that\footnote{These are common assumptions in duration models. See \cite{lancaster1979econometric} for the derivation of this result.}:
+
+\begin{equation}
+E(TOM) = \frac{1}{\left( \lambda + \mu_k \right) \left(1 - F(\theta^s) \right)}
+\end{equation}
+		
+\noindent so the expected time on the market increases with a higher valuation of the seller – that is, a higher reservation price – and less public information, all of which is consistent with the models of \cite{taylor1999time}, \cite{kurlat2015testing}, and \cite{han2016role}. Given that we assume that $\mu_1 > \mu_2$, having the inspection will reduce the expected time on the market. In our model, we assume that public inspection does not have a direct impact on average house price. While the outcome of the inspection can affect the individual house prices positively or negatively depending on the outcome, certification in itself should have no effect on average house price.
+
+According to this outcome, if we assume rationality, all sellers should apply for an inspection. In practice, however, that is not the case. There are two possible explanations for this fact. One is that the cost and time of the inspection is greater than the benefit. In the Netherlands, it should take a maximum of two weeks to receive the inspection results at a cost of \euro 200, which does not seem cost-prohibitive for sellers.\footnote{200 Euros is a relatively low cost for homeowners, given that the mean value of the houses sold in our sample was \euro 238,000 in the Netherlands. However, as shown by \cite{merlo2015home}, at least in terms of list price stickiness, menu costs as small as one percent of the estimated house value are enough to produce a high degree of stickiness.} The second possibility is that sellers are not willing to divulge information about the house, as they may be selling low-quality houses and do not wish to be compared with other high-quality homes. If quality can be perfectly observed, as we assumed before, then this is not a problem, as buyers will learn the quality of the house anyway; if the quality cannot be properly inferred, then there may be reasons not to have a public inspection as it may reduce the price of the house.
+
+
+\section{Residential Energy Efficiency}
+
+The Dutch residential market offers an unusual research laboratory for the study of energy efficiency. Energy conservation is presumably quite important for Dutch households, as the average annual energy bill of a Dutch household was approximately  \euro{1800}  in 2015 (about  \euro{600} for electricity and  \euro{1200} for gas).\footnote{This corresponds to approximately 3 percent of the average annual gross income of a Dutch household, according to data from CBS, and 21 percent of the typical monthly mortgage.} This average ranged from \euro{660} for the most energy-efficient homes to \euro{4140} for the least energy-efficient homes of similar size. \cite{brounen2012residential} showed that this wide cross-sectional variation in the Dutch residential energy consumption is a function of both technical characteristics of the dwelling and the composition and background of the household. In case of gas consumption, the thermal attributes of the structure are dominant. \cite{brounen2012residential} also showed that residents living in a well-maintained and insulated home consume about 12 percent less natural gas than the same home would with a lower level of maintenance and insulation. Therefore, the energy efficiency characteristics of a home are expected to influence the buyer's decision. In terms of pricing, \cite{aydin2017information} estimated that, in the Netherlands, the effect of a 10-percent increase in energy efficiency increases the price of the house by 2.2 percent. 
+
+Home sales in the Netherlands are typically executed through a realtor. In our empirical analysis, we use data provided by NVM, the largest realtor association in the Netherlands that has had a steady market share of over 70 percent during the sample period. NVM realtors sell homes, using both online and offline marketing. The sale process starts as soon as the realtor activates the online add. The sale is done through an iterative process, where a potential buyer puts in his initial bid to the broker, the broker informs the seller, and this starts the negotiation process. The seller can only negotiate with one buyer at a time and it is forbidden to reveal bids to other buyers. The seller negotiates with buyers in the order that their initial bids come in. The seller is under the obligation to reveal all relevant information about the house; otherwise, he or she can be held liable by the buyer in case any structural defect is discovered after the transaction \citep{de2010competing}.\footnote{Low energy-efficiency is not considered structural damage and is not a valid reason to hold the seller liable.} Buyers can observe the number of months that the house has been on the market. However, they can only observe the asking price at that moment in time.
+
+Starting in 2008, the Dutch government instituted a mandate for home sellers to present an energy performance certificate of their dwelling during the sales process. This is a direct result of the EPBD, which was transposed in the Netherlands in the Decree on Energy Performance of Buildings Regulations, stipulating that, “When selling a building the owner shall provide a copy of energy performance certificate for the property to the buyer”. The process for obtaining an EPC includes a visit from a technician who collects the following information: area of the façades, size of the windows, panels and doors, area of the ground floor, area of the roof planes, location of the building, insulation value of the various structural components, draft proofing and ventilation, and heating and hot water generation \citep{plateringen2013het}. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient), indicating how good the energy performance of the house is. The expert also makes some recommendations for possible ways to improve energy efficiency. The provision of this certificate reduces the information asymmetry between seller and buyer and reduces the buyer's subjective probability that the house may have a defect. 
+
+In practice, however, it has been possible to sell a home without an EPC, as dwellings constructed after 1999, or those that are registered as monuments, are exempted from mandatory disclosure of the energy performance certificate. Moreover, if the buyer of the dwelling signs a waiver, the seller is also exempt from providing the certificate; such waivers have become very popular among Dutch home sellers \citep{brounen2011economics}. This is due to the fact that if no label had been acquired prior to selling, it took a minimum of two weeks to obtain the certificate, at a cost of \euro{200}. During those two weeks, sellers and buyers could both back out of the sale, so there is an incentive to waive the label if all terms had been agreed. In case energy labels were adopted during the sale period, we registered the time on the market from the start of the sale listing until the transaction price settlement. The energy label did not need to be available at the start of the sale. In many cases, the energy labels have been added to the sale information during the time on the market. Later, we will assess the effect of this variation in timing of the label information during the sale period.   
+
+Since the possibility of getting waivers for the EPC was adopted in most transactions, the Dutch government started issuing indicative labels for houses in 2015. These indicative labels were based on Kadaster (Land Registry) data, including the age and type of the dwelling. These labels are given without a site visit, and are modelled based on the recorded spread of definitive labels across dwelling age and type.\footnote{Indicative labels have been granted since 2015 on every Dutch home, based on a mass appraisal model using observations of definitive energy labels of comparable homes of the same house type and of similar age. Home improvements that have been made by previous homeowners have not been considered, as these are not registered by the Kadaster database. Hence, these indicative energy labels contain less accurate information on the energy efficiency level of homes, but still add information compared to the case in which energy labels were absent.} The government also set up various websites where homeowners could observe their energy label and whether this was an indicative label or a definite certificate; that is, if an inspection had taken place. Homeowners could still apply for an improved label if they felt that the indicative certificate did not reflect the state of the house. Thus, starting in 2015, information on energy performance could either be highly informative if the definite label was available, or somewhat informative if only an indicative label was available. 
+
+\section{Data}
+
+In order to identify the impact of the availability of EPC on the speed of sale, we utilized the house transaction data for the years 2008 through 2016 obtained from the Dutch Association of Realtors and Appraisers (NVM). This data set contains around 70 percent of the house sales in the Netherlands. The NVM data includes information on vital house characteristics, such as: the transaction price, date of transaction, time on the market, location, number of rooms, floor space, number of floors, garage type, year the house was built, type of house, insulation, condition of the inner and outer maintenance, heating, and locational attributes like province, whether it is located downtown, outside the village, near a busy street, etc.  We also have information on the initial list price of the house. NVM realtors recommend an asking price for sellers to list their houses, but it is the seller who decides the list price. List prices are not binding, as the seller can refuse to sell at the list price or even try to negotiate above it. The seller can change the list price, but the history of list prices is not available to the buyer.\footnote{This is true for the Dutch housing market as whole, as no alternative data sources record this evolution of asking prices for individual dwellings.} 
+
+To obtain information on the presence of an EPC, we linked the NVM database to the EPC database that is provided by RVO (a government agency). The EPC data set includes information on the energy rating of the house and the date of the EPC adoption. Everything except the history of list prices is freely available online for buyers in one of the NVM-associated websites that advertise listings. 
+
+The final sample consists of 876,538 transacted homes, of which 110,049 (12.5\%) are transacted with definite label and 95,672 (11\%) are transacted with indicative label. Table 1 documents the descriptive statistics for the main variables of interest.\footnote{Table A1 in the Appendix presents the descriptive statistics for the other control variables used in the analysis. These characteristics are commonly used in the available literature to explain the time on the market (see \cite{sirmans2005composition,tucker2013days,merlo2004bargaining}).} These statistics indicate that labeled houses are similar to the non-labeled homes regarding most characteristics, except for the fact that the former were sold faster, tend to be cheaper and smaller, and have lower asking prices. The statistics also show that the houses that adopted an indicative label have very similar characteristics to the non-labeled homes. Therefore, the difference in size, asking price, transaction price, and time on the market is more evident when we compare the non-labeled homes with the homes that have a definite label, and will be controlled for in our subsequent analyses.
+
+\begin{center}
+-- Insert Table 1 --
+\end{center}
+
+As for the timing of the sales and label adoption, in Figure 1, we observe that the adoption rates for definite labels has remained relatively stable throughout the study period, but the introduction of indicative labels in 2015 increased the percentage of houses sold with a label. We did not observe a drop in the adoption rate after 2015 for definite labels, which may signal that the market still values the information given by this type of label.
+
+\begin{center}
+-- Insert Figure 1 --
+\end{center}
+
+A potential source of bias in our analysis could be that sellers of energy-efficient homes are more likely to adopt EPC because they want to send a positive signal to the market, while sellers of energy-inefficient homes do not wish to make this knowledge public. If that is the case, we will not be able to capture the effect of having an EPC on TOM, and will instead be capturing the effect of having higher energy efficiency on TOM. Although, as seen in Figure 2, the adoption of EPCs does not seem to be skewed towards high-performing homes, A and B rating categories, we will control for any potential selection bias by including related control variables, and by applying propensity score matching and repeated sales analysis approaches.
+
+\begin{center}
+-- Insert Figure 2 --
+\end{center}
+
+Finally, for any nudge to be successful, it is important that labels do add information to the already known or easily observable characteristics of the house. That is, if labels are a straightforward outcome of other observable dwelling characteristics, the label information is not relevant for the buyer. In Figure 3, we plot two variables – the construction year and the type of house – that a priori may be considered to be good approximations for the label. From these graphs, we can observe that the energy performance varies across house types and construction years. However, with the exception of newer dwelling, which due to stricter building codes all exhibit high energy efficiency, house type and age by themselves do not predict the outcome of the energy label. In most cases, the energy label does seem to carry additional information above and beyond the main observable dwelling attributes. Nonetheless, it is important to include all potential observable predictors of energy performance in the analysis. This also enables us to partially control for any potential bias that might originate from the higher likelihood of label adoption by sellers of energy-efficient homes.
+
+\begin{center}
+-- Insert Figure 3 --
+\end{center}
+
+\section{Methodology and Results}
+
+\subsection{Empirical Specification}
+
+We estimate the following empirical model to identify the impact of the energy label provision on the time on the market:  
+\begin{equation}
+TOM_{i} = \beta_0 + \beta_1 Label_i + \beta_2 P_i + \sum_j \delta_j T_{j,i} + \sum_k \lambda_k H_{k,i} + \sum_l \alpha_l L_{l,i} + \sum_m \gamma_m M_{m,i} 
+\end{equation}
+
+\noindent where $i$ refers to variables that change by sale, $j$ refers to those that change by time period, $k$ refers to those that change by house, $l$ are those that change by location, and $m$ are those that change by energy performance.
+ 
+$TOM_i$ is the logarithm of the number of days passed between the first day house $i$ was put up for sale on the market and the date it is transacted; $Label_i$ is a dummy variable indicating the adoption of an energy label before the transaction of the dwelling. $\beta_1$ is our parameter of interest, which indicates the percentage change in the time on the market, resulting from the provision of energy performance certificate during the sale process. $P_i$ denotes the initial asking price of the house, which is used to control for the potential effect of the reservation price of the seller on the time on the market. \cite{black1996use} document that the asking price has an anchoring effect on the seller reservation price, while \cite{han2016role} show that the asking price setting strategy has an effect on the rate of arrival of buyers. We take the initial list price as a sign of the seller's reservation price; that is, a higher list price controlling for the observable characteristics means that the seller has a higher reservation price.\footnote{We also used the change between initial asking price and transaction price. The results are similar to those shown here.} $T_i$ controls for market conditions that are proxied by year and quarter fixed effects, as these have an effect on seller behavior, as pointed out by \cite{cheng2010home}. $H_i$ represents house characteristics such as size of the house in square meters, number of rooms, number of floors, type of house, and the type of parking place. $L_i$ denotes the location-related characteristics, including province fixed effects,\footnote{We estimated the model with different spatial aggregations, and find no significant difference in the estimated parameter of interest ($\beta_1$).} the location of the house relative to a busy street, distance from the city center, and the view of the house. Since we want to identify the impact of any additional information that EPCs provide to homebuyers beyond what can be already observed, we also control for the observable characteristics of the house that could be correlated with the energy performance, represented by $M_i$. This is a vector of variables including the state of the outside and inside maintenance, type of heating system, number of insulation measures, and the year that the house was built.
+
+\subsection{OLS and PSM Estimations}
+
+Table 2 reports the condensed OLS estimation results.\footnote{An extended table of our regression coefficients is reported in the Appendix, Table A2. Most of the estimated coefficients for } In the first column, we have only included province and time fixed effects as control variables. In the second column, we have also included the asking price and a set of house characteristics, while in the third column we have added controls for variations in maintenance and insulation. For all three specifications, we document that houses with an EPC tend to be sold quicker than those without. Houses with an EPC spend 16.2 percent less time on the market than those without it, controlling for all observable characteristics that might affect the time on the market. Thus, despite the fact that some of the difference can be explained by house and maintenance characteristics, the EPCs appear to play a role in the speed of the sale.
+
+\begin{center}
+-- Insert Table 2 --
+\end{center}
+
+To further check the validity of our OLS results, we apply a propensity score matching (PSM) approach. As we mentioned earlier, our analysis may suffer from a selection bias, especially during the first period when energy ratings were voluntary. The summary statistics already reveal that, due to this opting-out opportunity, the labeled and non-labeled samples differ on a number of housing characteristics. The PSM approach enables us to compare the time on the market for the labeled dwellings with non-labeled dwellings that have similar observable characteristics, assuming that there are no unobservable differences between them. In order to do this, we run a logit model on having a label using as covariates the same controls as in the previous OLS regressions. With this, we estimate the propensity score for each observation. Since our model includes continuous variables, exact matching is not possible. Therefore, the matching was done by choosing the nearest neighbor based on the estimated propensity scores.\footnote{\added{\textbf{The results for other matching methods (matching with 1 nearest neigbor (NN), matching with 5 NN, inverse probability weighting and regression adjustment approach) are reported in the Appendix, Table A3. These results indicate that presence of label reduces the TOM by around 5.6\% to 12.7\% percent, which is close to our previous findings.}}} The result of the balancing for the average treatment effect on the treated (ATT) can be seen in Figure 4, which shows a reduction in the difference of the distributions of propensity scores between labeled and non-labeled homes. Finally, as we use an estimated propensity score, we have to take into account the uncertainty this represents. We use the method proposed by \cite{abadie2016matching} which allows us to consistently estimate the variance of the large sample distribution of the propensity scores.
+
+\begin{center}
+-- Insert Figure 4 --
+\end{center}
+
+
+In column 4 of Table 2, we report the results of our PSM estimation. Although the estimated coefficient is smaller than the OLS estimates (7 percent reduction in TOM as opposed to 16.2 percent for OLS), the difference in TOM between labeled and non-labeled homes is still statistically significant. The difference between the results of OLS and PSM estimations indicates that differences in observable characteristics of labeled and non-labeled houses influence the size of the estimated label effect on TOM. That is, the average treatment effect on the treated (ATT) and the average treatment effect on the untreated (ATU) are different.\footnote{We should note that our PSM approach is not able to eliminate the risk of bias that might occur due to unobservable home characteristics or seller-specific characteristics. In the next section, we propose an alternative approach that eliminates the potential correlation between the presence of label and seller-specific factors. Unobserved house characteristics might also lead to a bias in case these characteristics are correlated with the label adoption decision. Fortunately, we are able to control for the time-invariant unobserved house specific characteristics in our repeated sales analysis, which will be discussed in more detail in section 5.3.}
+
+As explained in our theoretical model, TOM is not the only decision that home sellers make but they also need to take the price of the house into consideration. While there are studies relating to the effect of the rating of the label on the price, i.e. ``A" labeled houses sell for higher prices than comparable ``G" labeled houses, there is no reason to believe that labeling in itself should affect the price. In order to check this, we use the same specifications as in columns 3 and 4 of Table 2 but this time with the transaction price as the dependent variable. Table 3 reports the results of this exercise. Although the OLS results indicate a significant positive effect on house prices, this effect is no longer significant when we apply PSM approach, which is in line with our expectations.
+
+\begin{center}
+-- Insert Table 3--
+\end{center} 
+
+\subsection{Sub-sample Analysis}
+
+Thus far, we have assumed that there are no unobserved housing characteristics that might be correlated with the adoption of the label and affecting the time on the market. To control for these unobserved factors that might affect the adoption of label, we have restricted our sample to only those houses that adopted the EPC, either before the sale or in a short period after.\footnote{One potential reason for the adoption of the label just after transaction date might be related to the seller’s willingness to avoid perceived monetary and non-monetary costs of the label adoption process. The law states that in case the buyer agrees, the seller is not required to provide the certificate. Thus, some sellers may be willing to postpone the decision until the transaction date, as there is a possibility that the buyer will not request it. But, if the buyer asks for the certificate, then the seller is required to apply for the label, which can explain why the label is adopted just after the transaction date by a group of homes. Another reason might be that some of the new owners want to obtain detailed information about the energy efficiency level of their new homes in order to assess the potential cost-effective energy efficiency improvement options.} This allows us to compare two similar groups of houses that adopted energy labels, while for one group the additional information (label) is provided before the transaction.\footnote{We should note that there might still exist some unobserved factors that might be correlated with the timing of the label adoption and affecting the time on the market.} In order to ensure that the label adoption decision reflects the status of the house at the time of transaction – it is not taken after a renovation of the house – we would like to take a short period after the sale. On the other hand, in order to have a larger comparison group, we also need to consider longer time intervals. Therefore, we use 60, 90, 120, and 150 days after the sale as different cutoff points for the selection of comparison groups. The results in Table 4 indicate that the effect of having a label before sale reduces the time on the market, by between 8.9 and 7.2 percent as compared to the homes that adopted the label just after transaction. A result, which is very similar to the PSM result of Table 2. 
+
+\begin{center}
+-- Insert Table 4 --
+\end{center}
+
+Another possible source of bias might be related to seller-specific unobserved factors that affect the label adoption decision. For instance, if the sellers who put more effort on marketing their homes are more likely to adopt energy labels, than this might lead to an over-estimation of the label effect, as the estimated coefficient of the presence of label might be capturing the influence of seller’s extra effort. To control for possible effects of more concerned sellers being the ones opting in to the label, we restrict the sample to houses that were sold twice during our period of analysis. The idea is to compare the labeled homes for which the label was adopted by the previous seller (not the current seller) with the homes that are not labeled. In other words, we compare the TOM of houses that were sold for a second time with the same energy label as in the first transaction versus houses that were sold twice without a label. In this case, the decision to adopt a label was not up to the  sellers in the second sale, but merely a result of an earlier active decision of the previous owners during the first sale. This way, we can assume that the presence of label is independent of the characteristics of the current seller. The results reported in column 1 of Table 5 indicate that after eliminating the potential correlation between seller-specific unobserved characteristics and the presence of EPC, there is still a significant negative effect of EPC on TOM. We also compare the homes that were sold for a second time with a label that is adopted by the previous seller with the homes that were sold for a second time with a label that is adopted by the current seller. The estimated coefficient reported in column 2 of Table 5 lacks statistical significance, which leads us to believe that certification in itself affects the TOM, not the seller's decision.
+
+\begin{center}
+-- Insert Table 5 --
+\end{center}
+\subsection{Repeated Sales Analysis}
+
+Another approach that can be used to measure the impact of EPC on TOM is to analyze repeated sales for the same home and test whether the adoption of a label for the second sale reduces the time on the market. This helps to eliminate any potential bias related to the house-specific unobserved and omitted factors that might influence the speed of sale. Assuming that the dwelling remains virtually the same in the repeated sales analysis over time, this offers a valuable alternative to hedonic controls.\footnote{We verified the floor area and interior/exterior maintenance figures across both sales to ensure that no extensions or large refurbishments have taken place in the meantime.} For this reason, we created a subsample of houses sold exactly twice, excluding those that were sold twice in a time period of less than a year as these often tend to be resold for tax and speculation purposes \citep{aydin2017information}. We also excluded those houses that already had a label in the first sale, as we have focused on the label introduction across two sales. Using this subsample, we apply a difference in differences analysis, controlling for confounding covariates:
+
+\begin{equation}
+\Delta TOM_i = \beta_1 \Delta Label_i + \Delta Controls_i + \varepsilon_i
+\end{equation} 
+
+\noindent where $\Delta Label$ takes a value of one if the house was sold without a label at the first sale and with a label at the second sale. It takes a value of zero if the home was sold without a label at both sales. Thus, $\beta_1 $ measures the change of TOM associated with the adoption of a label for the second sale. We use the same controls as before to control for  over-time changes in covariates, excluding those that do not change over time, such as province, house size or type.  
+
+First, we further restricted the sample to houses sold twice in the period 2000-2016, where the first sale was executed before 2007 (the year of the introduction of label policy) and the second sale took place after 2007. We did this to control for the fact that, in the first observation period, there was no possibility of obtaining EPCs, so if the owners of labeled houses are different than those that did not get the label this approach will capture this. Using this subsample, we first estimate a naive regression in which the change only depends on the label; in this case, the TOM is reduced by 6.3 percent, as shown in column 1 of Table 6. Once we control for observed characteristics that change over time, as well as the TOM for the first sale to control for possible regression to the mean, which may affect the change in our variable of interest, and as shown by \cite{laird1983further} this variable shows a negative sign which can be interpreted as houses that had a longer initital TOM tend to have lower TOM the second time. In column 2, we document that the decrease in the TOM is 12.7 percent, which is consistent with our previous results.
+
+
+\begin{center}
+-- Insert Table 6 --
+\end{center}
+
+Finally, we restricted the sample to the homes that were transacted twice between 2008 and 2016, as in this case we are able to compare houses for which previous owner opted out of having a label in the first sale and then the same house was sold with a label. The results, reported in column 3 indicate that in this case the reduction is of 12.1 percent, which is in line with the results for the other subsample.
+
+\subsection{Introduction of Indicative Labels}
+
+The implementation of the EU Directive on residential energy certification was not straightforward in the Netherlands. After being the first country to introduce the initial energy labels on a national scale on January 1, 2008, the Dutch government had concluded that the opting-out opportunity was hampering the intended diffusion of the certificates. The adoption rates of Figure 1 were matters of concern to policymakers in Brussels and The Hague. Hence, after the first seven years, during which definitive labels were issued after a careful on-site inspection by trained engineers, the Dutch government switched to providing free, indicative labels to all houses in the market using available data such as year of construction, housing type, and living space.\footnote{The monuments and the homes built less than 10 years before the sale date are exempted from this.}  To assess the effects of this switch in label policy, and the change in information content of the corresponding rating, we extended our analysis with split sample regressions across these first- and second-generation labels. 
+
+Column 1 of Table 7 reports the results of an OLS regression with all the controls and includes a dummy that signals whether the label was definite or indicative. We document that the effect for definite label is three times the effect for indicative ones: 21.9 percent for definite label vs. 7.2 percent for indicative label. However, as shown in the previous analysis, this could be due to differences between the labeled and non-labeled homes. Therefore, we also applied a PSM approach, using the definite label and indicative labels as competing treatments. For this, we used a serial probit analysis; that is, we estimated a binomial probit where the definite (indicative) label is the treatment and excluded the dwellings with indicative (definite) labels from the estimation. The serial probit is considered to be more robust to potential misspecification, as discussed by \cite{caliendo2008some}. Column 2 documents that when a definite label was adopted, there is a reduction of 8.3 percent in the time on the market while it is 4.2 percent for indicative labels (column 3).\footnote{It should be noted that the indicative label can only be compared to the homes sold in 2015 and 2016, as including homes sold before then would violate the common support assumption made in the PSM.}
+
+\begin{center}
+-- Insert Table 7 --
+\end{center}
+
+The above results indicate that although the underlying information is already available to the prospective buyers, the provision of indicative labels, which is calculated based on this available information, reduces the time on the market. This result might seem unexpected as these labels are constructed based on the information that is observable to the buyer. However, we should note that the buyers are not always able to easily predict the potential energy efficiency level with the given information, due to the complexity of the problem. For instance, although the buyer can observe the construction year of the dwelling (which is one of the most important determinants of the energy efficiency), she may not be able to predict its impact on the energy requirement of the dwelling. On the other side, as the seller has experienced the thermal quality of the dwelling during her stay, she has a more clear idea about its energy efficiency level. That is why, although the age of dwelling is observable to the prospective buyer, there is still an information asymmetry between seller and buyer regarding the energy efficiency level of the dwelling.\footnote{We should also note that the indicative labels may also increase the salience of the given information for the buyer, which may also partly explain its impact on time on the market.}
+
+\section{Energy Ratings and the Effect of Green vs. Brown}
+
+Finally, we investigate whether the effect of the label is due to acquiring the label itself or due mostly to the content of the label; for example, whether the effect we found results mainly from ``A" and ``B" labels. To do this, we apply two different approaches. First, we use the variables indicated by the Dutch government to construct the indicative label, in order to make a prediction of the energy rating that non-labeled houses would have attained based on their characteristics. While the exact formula used by the Dutch government to give the energy ratings has not been made public, the variables used to determine these ratings are known, these are period of construction, size of the dwelling, type of house, isolation, and heating characteristics. We first estimated an ordered probit model using the data on known indicative labels and these variables. Then, based on the parameter estimates obtained from this estimation, we predicted energy rating for all the dwellings in our sample. We then divided the sample into subsamples based on the predicted energy rating and compared the labeled and non-labeled houses within each predicted rating.
+
+Column 1 of Table 8 presents the OLS estimation results for these comparisons and shows that labeled homes spent less time on the market, also for below-average labels ``E" and ``F". This effect increases with the outcome of the label, ranging from a 6 percent decrease for ``F" to almost 29 percent for ``A"-labeled homes. For the small subset of ``G" labels, we find that a certified rating delayed the sale, but this effect lacked statistical significance. 
+
+\begin{center}
+-- Insert Table 8 --
+\end{center}
+
+The second method we used is to compare the houses that were labeled before sale with those that received their label after the sale. That is, we estimate a regression for every value of the label including only the houses that received that label. The second column of Table 8 confirms the effect found in the previous approach. Nonetheless, the difference between effects in the high-performance dwellings and the low-performance dwellings is not as large.
+
+\section{Conclusions}
+
+Our results show that energy ratings help to reduce the time on the market by 7–12 percent and that this effect is consistent across specifications and market subsections. Given that we control for different possible mechanisms that may reduce TOM, our results indicate that the information conveyed by energy performance certificates helps to limit the information asymmetry between buyers and sellers, which speeds up the sale by an average of 15 - 25 days. This effect changed over time, along with the information content of the certificates. After the initial engineering certificates, issued after an on-site inspection of the dwelling, were replaced by more indicative mass appraisal-based certificates, the speed of sale effect was halved. Finally, our results show evidence that this speed of sale effect differs across rating outcomes. Being rated has the strongest impact in the most favorable label categories. Being labeled ``A" speeds up the sale by over 28 percent, while being labeled ``F" reduced the time on the market by only 6 percent. 
+
+All in all, our results show that energy labels affect housing transactions beyond the well-documented price capitalizations. The implied information regarding future utility costs is appreciated by buyers. Our analysis offers the first empirical evidence that all ratings, both good and bad, help reduce the information gap between sellers and buyers, and thereby smoothen the sale process. By revealing this additional element of information during the sale process, the speed of sale is reduced significantly; this is an important finding for homeowners and financiers that seek liquidity enhancement in a market where liquidity is scarce. These results contribute to the literature of how nudges affect behavior. We have shown that the more information the labels transmit the bigger the effect, as expected, but even inexpensive indicative labels reduce TOM, and the effect is true for both green and brown dwellings. Future research should investigate why some sellers then chose not to apply for the label; one explanation could be stickiness due to the monetary costs of applying.
+
+\newpage
+\bibliographystyle{chicago}
+\bibliography{bib}
+
+\clearpage
+\newpage
+
+\begin{figure}[H]
+\footnotesize
+\caption{Percentage of Home Sales with and without Label}
+\begin{center}
+\includegraphics[width=13cm]{labgraph}
+		\scriptsize
+		\begin{tablenotes}
+		\scriptsize
+\item \textit{Notes:} This figure shows the shares of daily transaction with a definite or indicative label from 2008 to 2016. The process for obtaining a definite label includes a visit from a technician who collects information on detailed thermal characteristics of the home. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient). The Dutch government started issuing indicative labels for houses in January 2015. Indicative labels are based on public Kadaster (Land Registry) data, so most home improvements undertaken by homeowners were not considered when constructing this label. Therefore, starting in 2015, information on energy performance may have been of two types: either highly informative if the definite label is available, or low informative if only indicative label is available.
+
+\end{tablenotes}
+		
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\footnotesize
+\caption{Distribution of Label Ratings by type of Label}
+\begin{center}
+\includegraphics[width=13cm]{labdist}
+		\scriptsize
+		\begin{tablenotes}
+		\scriptsize
+\item \textit{Notes:} This figure shows the distribution of label ratings for the homes that are transacted with a definite and indicative label, separately. The process for obtaining a definite label includes a visit from a technician who collects information on detailed thermal characteristics of the home. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient). The Dutch government started issuing indicative labels for houses in 2015. Indicative labels are based on public Kadaster (Land Registry) data, so most home improvements undertaken by homeowners were not considered when constructing this label. Therefore, starting in 2015, information on energy performance may have been of two types: either highly informative if the definite label is available, or low informative if only indicative label is available. 
+
+
+\end{tablenotes}
+		
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\footnotesize
+\caption{Construction Period, House Type and Label Ratings}
+\begin{center}
+\includegraphics[width=13cm]{labtype}
+		\scriptsize
+		\begin{tablenotes}
+		\scriptsize
+\item \textit{Notes:} This figure shows the distribution of label ratings (for the homes that are transacted with a definite or indicative label) within different construction period and house type categories, separately.
+\end{tablenotes}
+		
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\footnotesize
+\caption{Propensity Scores}
+\begin{center}
+\includegraphics[width=13cm]{balance}
+		\scriptsize
+		\begin{tablenotes}
+		\scriptsize
+\item \textit{Notes:} This figure shows the propensity scores of the sample before and after matching.
+\end{tablenotes}
+		
+\end{center}
+\end{figure}
+
+
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{Descriptive Statistics}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+& Full Sample                      & Definite Label & Indicative Label & Not Labeled \\
+\hline
+
+&&&&\\
+Time on the Market (Days)                       & 211.09         & 152.52           & 205.48      & 221.50    \\
+                                 & (292.60)       & (240.20)         & (345.40)    & (291.00)  \\
+Transaction Price (\euro 1,000) & 238.60         & 187.09           & 243.86      & 246.30    \\
+                                 & (127.30)       & (101.80)         & (118.00)    & (130.30)  \\
+Asking Price (\euro  1,000)      & 257.06         & 196.99           & 256.40      & 267.04    \\
+                                 & (136.90)       & (110.40)         & (124.10)    & (140.00)  \\
+Area ($m^2$)                        & 115.28         & 101.02           & 118.48      & 117.16    \\
+                                 & (40.35)        & (34.26)          & (38.63)     & (41.04)   \\
+Year of Construction:            &                &                  &             &           \\
+1500–1905                        & 0.05           & 0.02             & 0.03        & 0.06      \\
+1906–1930                        & 0.11           & 0.08             & 0.09        & 0.12      \\
+1931–1944                        & 0.07           & 0.04             & 0.06        & 0.08      \\
+1945–1959                        & 0.08           & 0.12             & 0.06        & 0.08      \\
+1960–1970                        & 0.15           & 0.21             & 0.13        & 0.14      \\
+1971–1980                        & 0.16           & 0.22             & 0.14        & 0.15      \\
+1981–1990                        & 0.13           & 0.19             & 0.13        & 0.12      \\
+1991–2000                        & 0.13           & 0.08             & 0.16        & 0.13      \\
+2001+                            & 0.13           & 0.04             & 0.18        & 0.13      \\
+Type of House:                   &                &                  &             &           \\
+Apartment                        & 0.31           & 0.38             & 0.26        & 0.31      \\
+Row House                        & 0.28           & 0.32             & 0.30        & 0.27      \\
+Semi-detached House              & 0.02           & 0.01             & 0.03        & 0.02      \\
+Corner House                     & 0.12           & 0.14             & 0.12        & 0.12      \\
+Half of double House             & 0.14           & 0.10             & 0.16        & 0.15      \\
+Detached House                   & 0.12           & 0.05             & 0.13        & 0.14      \\
+&&&&\\
+N                                & 876,538      & 110,049        & 95,672    & 670,817 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Standard deviations are reported in parenthesis. Column (1) reports the descriptive statistics for the main characteristics of the average home in our sample. Column (2) reports the descriptive statistics for the homes transacted with a definite label. The process for obtaining a definite label includes a visit from a technician who collects information on detailed thermal characteristics of the home. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient), indicating how good the energy performance of the house is. Dwellings constructed after 1999, or those that are registered as monuments, are exempted from mandatory disclosure of the label. Moreover, if the buyer of the dwelling signs a waiver, the seller is also exempt from providing the label. Column (3) reports the descriptive statistics for the homes transacted with an indicative label. Since the possibility of getting waivers for the EPC was adopted in most transactions, the Dutch government started issuing indicative labels for houses in 2015. Indicative labels are based on public Kadaster (Land Registry) data, so most home improvements undertaken by homeowners were not considered when constructing this label. Therefore, starting in 2015, information on energy performance may have been of two types: either highly informative if the definite label is available, or low informative if only indicative label is available. Column (4) reports the descriptive statistics for the homes transacted without label.
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{OLS and PSM Estimation Results}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+&OLS                     & OLS& OLS& PSM \\
+\hline
+&&&&\\
+ Presence of EPC	 & -0.255*** & -0.166*** & -0.162***& -0.070***\\
+& (0.003) & (0.003) & (0.003) & (0.006) \\
+&&&&\\
+Asking Price (\euro 1,000)	& & 	0.001***& 	0.001***& \\
+& &  (0.000) & (0.000) & \\
+&&&&\\
+Year and Quarter Fixed Effects & Yes & Yes & Yes & Yes \\
+Location Characteristics & Yes & Yes & Yes & Yes \\
+Dwelling Characteristics & No & Yes & Yes & Yes \\
+Maintenance and Insulation Characteristics & No & No & Yes & Yes \\
+&&&&\\
+N	& 853,408 &	848,916 &	848,916 &	848,893 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (4), the coefficient of EPC represents the average treatment effect (ATE) from propensity score (PSM) estimation. In column (4), ``Asking price" is used in the first stage to calculate the propensity score.   *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{OLS and PSM Estimation Results (Transaction Price)}
+      \begin{tabular}{lcc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+&                  OLS& PSM \\
+\hline
+&&\\
+ Presence of EPC	 &  2.428$^{***}$ & 0.961 \\
+& (0.070) & (0.618)  \\
+&&\\
+Asking Price (\euro 1,000)	&	 0.864$^{***}$ & 	 \\
+&   (0.0003) &  \\
+&&\\
+Year and Quarter Fixed Effects  & Yes & Yes \\
+Location Characteristics & Yes & Yes \\
+Dwelling Characteristics  & Yes & Yes \\
+Maintenance and Insulation Characteristics & Yes & Yes \\
+&&\\
+N	& 848,916 &	848,893 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the transaction price in thousands of euros. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (2), the coefficient of EPC represents the average treatment effect (ATE) from propensity score (PSM) estimation. In column (2), ``Asking price" is also included in the first stage to calculate the propensity score.   *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{OLS Estimation Results: \\Comparing Labels Adopted before and after Transaction}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+&	60 Days & 90 Days & 120 Days & 150 Days \\
+\hline
+&&&&\\
+Presence of EPC before transaction	& -0.089$^{***}$ & -0.086$^{***}$ & -0.078$^{***}$ & 	-0.072$^{***}$ \\
+& (0.005) & (0.005) & (0.005) & (0.005) \\
+&&&&\\
+Asking Price (\euro 1,000)	& 0.001$^{***}$ & 0.001$^{***}$ & 0.001$^{***}$ & 0.001$^{***}$ \\
+& (0.000) & (0.000) & (0.000) & (0.000) \\
+&&&&\\
+Year and Quarter Fixed Effects	& Yes &	Yes & Yes & Yes \\
+Location Characteristics	& Yes &	Yes & Yes & Yes \\
+Dwelling Characteristics	& Yes &	Yes & Yes & Yes \\
+Maintenance and Insulation Characteristics	& Yes &	Yes & Yes & Yes \\
+&&&&\\
+N 	& 260,794 & 272,138 & 278,391 & 281,874 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} The table reports the estimation results comparing the time on the market between homes that adopted a label before transaction and homes that adopted a label just after transaction. In order to ensure that the label adoption decision reflects the status of the house at the time of transaction, we take a short period after the sale. We use 60, 90, 120, and 150 days after the sale as different cutoff points for the selection of comparison group. Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{OLS Estimation Results:\\ Labels Adopted by the Previous Seller}
+      \begin{tabular}{lcc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+                
+\hline
+&&\\
+Presence of EPC (adopted by previous seller)& 	-0.257$^{**}$ & -0.043 \\
+& (0.027) & (0.039) \\
+&&\\
+Asking Price (\euro 1,000) & 0.00008 & 	-0.0007  \\
+& (0.00012) &  (0.0004) \\
+&&\\
+Year and Quarter Fixed Effects  & Yes & Yes \\
+Location Characteristics & Yes & Yes \\
+Dwelling Characteristics  & Yes & Yes \\
+Maintenance and Insulation Characteristics & Yes & Yes \\
+&&\\
+N &	18482 &	5302 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market for the second sale of the house. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (1) we compare houses that were labeled during the first sale and conserve the same label for the second sale versus houses that were not labeled at any point in time. In column (2) we compare houses that acquired a label for the second sale versus those that already had it for the first sale. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{Repeated Sales Analysis}
+      \begin{tabular}{lccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+&	1st sale$<=$2007  & 	1st sale$<=$2007 & 1st sale$>$2007 \\
+& 2nd sale$>$2007 & 2nd sale$>$2007 & 2nd sale$>$2007 \\
+\hline
+&&&\\
+$\Delta$ Presence of EPC& 	-0.063$^{**}$ & -0.127$^{***}$ & -0.121$^{***}$ \\
+& (0.026) & (0.020) & (0.029) \\
+&&&\\
+$\Delta$ Asking Price (\euro 1,000) & & 	0.001$^{***}$ & 0.001$^{***}$ \\
+& &  (0.000) & (0.000) \\
+&&&\\
+Initial TOM	 & &	-0.919$^{***}$ & -0.900$^{***}$ \\
+& & (0.004)	& (0.008) \\
+&&&\\
+Year and Quarter Fixed Effects & No & Yes & Yes \\
+$\Delta$ Maintenance and Insulation Characteristics	& No &	Yes &	Yes \\
+&&&\\
+N	& 95,292 &	95,292 &	17,794 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the change in the logarithm of number of days on the market between first and second sale. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions are proxied by year and quarter fixed effects for both the first and second sales. ``Initial TOM" indicates the time on the market for the first sale. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures. In column (1) and (2), the sample includes the homes sold twice in the period 2000-2016, where the first sale was executed before 2007 (the year of the introduction of label policy) and the second sale took place after 2007. In column (3), the sample includes the homes that were transacted twice between 2008 and 2016. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{OLS and PSM Estimation Results: Definite and Indicative Labels }
+      \begin{tabular}{lccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+&	OLS &	PSM&	PSM \\
+\hline
+&&&\\
+Definite Label &	-0.219$^{***}$ & 	-0.083$^{***}$ & \\
+& (0.004) & (0.006) & \\
+&&&\\
+Indicative Label &	-0.072$^{***}$ & & -0.042$^{***}$ \\
+ & (0.005) & & (0.008) \\
+&&&\\
+Asking Price (\euro 1,000) &	0.001$^{***}$ & & \\
+& (0.000) & & \\	
+&&&\\
+Year and Quarter Fixed Effects	& Yes &	Yes & Yes\\
+Location Characteristics	& Yes &	Yes & Yes  \\
+Dwelling Characteristics	& Yes &	Yes & Yes  \\
+Maintenance and Insulation Characteristics	& Yes &	Yes & Yes  \\
+&&&\\
+N & 	848,916	& 756,514 &	197,361 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions at the time of listing are proxied by year and quarter fixed effects. In columns (2) and (3), the coefficients of ``Label" represent the average treatment effect (ATE) from propensity score (PSM) estimation. For PSM estimations, ``Asking price" is used in the first stage to calculate the propensity score. For this, we used a serial probit analysis; that is, we estimated a binomial probit where the definite (indicative) label is the treatment and excluded the dwellings with indicative (definite) labels from the estimation. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+
+
+\clearpage
+\newpage
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\footnotesize
+  \centering
+  \caption{Effect of Label Provision on TOM by Different Energy Rating Categories}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&&\multicolumn{1}{c}{(2)}&\\
+& Predicted Label &N & Given Label	&N \\
+\hline
+&&&&\\
+A &	-0.287$^{***}$ & 104,692 & -0.125$^{***}$ & 49,921  \\
+& (0.013)	& &	(0.013)	& \\
+&&&&\\
+B	& -0.129$^{***}$ & 99,501 &	-0.125$^{***}$ & 44,575 \\
+ & (0.012)	 & &  (0.015) & \\	
+&&&&\\
+C	& -0.207$^{***}$ & 162,389	& -0.123$^{***}$ & 99,023 \\
+& (0.008)	& & (0.009) & \\
+&&&&\\
+D &	-0.181$^{***}$ & 265,285 & -0.075$^{***}$ & 67,547 \\
+ & (0.006) & & (0.011) & \\	
+&&&&\\
+E & -0.099$^{***}$ & 179,256 &	-0.044$^{***}$ & 47,384 \\
+& (0.008)	& & (0.012) & \\
+&&&&\\
+F	& -0.059$^{**}$ & 19,166	& -0.027 & 33,602 \\
+& (0.029)	& & (0.015) & \\
+&&&&\\	
+G	& 0.014 & 18,627 & -0.067$^{***}$ & 24,316 \\
+& (0.037)	& & (0.018) &	\\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. Column (1) reports the estimated differences in TOM  between labeled and non-labeled homes for each predicted energy rating category, \added{ \textbf{as the predicted and actual label may differ we also include whether the predicted label was higher or lower than the given label, i.e. a value of 1 indicates that the predicted label is higher, 0 that is the same and -1 that is lower, to differentiate between the effect of the result of the inspection and the certification itself}}. Column (2) reports the estimated differences in TOM  between homes that are labeled before transaction and the homes that are labeled after transaction for each given energy rating category. We used the same control variables for all regressions. Market conditions are proxied by year and quarter fixed effects. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+
+
+
+
+\appendix
+\section*{Appendix}
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A1: Descriptive Statistics}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+& Full Sample                      & Definite Label & Indicative Label & Not Labeled \\
+\hline
+&&&&\\
+    Number of Rooms & 4.44  & 4.14  & 4.56  & 4.48 \\
+          & (1.5) & (1.34) & (1.39) & (1.53) \\
+    Number of Floors & 2.28  & 2.12  & 2.36  & 2.29 \\
+          & (0.899) & (0.914) & (0.861) & (0.899) \\
+          &       &       &       &  \\
+    Province: &       &       &       &  \\
+    Groningen & 0.04  & 0.04  & 0.04  & 0.04 \\
+    Friesland & 0.04  & 0.04  & 0.04  & 0.04 \\
+    Drenthe & 0.03  & 0.03  & 0.03  & 0.04 \\
+    Overijssel & 0.06  & 0.07  & 0.06  & 0.06 \\
+    Gelderland & 0.12  & 0.10  & 0.14  & 0.12 \\
+    Utrecht & 0.09  & 0.08  & 0.10  & 0.10 \\
+    Noord Holland & 0.19  & 0.20  & 0.15  & 0.19 \\
+    Zuid Holland & 0.21  & 0.22  & 0.21  & 0.21 \\
+    Zeeland & 0.02  & 0.02  & 0.01  & 0.02 \\
+    Noord Brabant & 0.13  & 0.13  & 0.15  & 0.13 \\
+    Limburg & 0.03  & 0.04  & 0.04  & 0.03 \\
+    Flevoland & 0.02  & 0.03  & 0.03  & 0.02 \\
+          &       &       &       &  \\
+    Transaction Year: &       &       &       &  \\
+    2008  & 0.14  & 0.11  & 0.00  & 0.16 \\
+    2009  & 0.11  & 0.07  & 0.00  & 0.13 \\
+    2010  & 0.11  & 0.09  & 0.00  & 0.13 \\
+    2011  & 0.10  & 0.09  & 0.00  & 0.12 \\
+    2012  & 0.09  & 0.10  & 0.00  & 0.11 \\
+    2013  & 0.07  & 0.09  & 0.00  & 0.08 \\
+    2014  & 0.10  & 0.12  & 0.00  & 0.11 \\
+    2015  & 0.12  & 0.16  & 0.36  & 0.08 \\
+    2016  & 0.15  & 0.18  & 0.64  & 0.08 \\
+          &       &       &       &  \\
+    Heating System: &       &       &       &  \\
+    Boiler/ City/ Hot Air & 0.92  & 0.91  & 0.95  & 0.91 \\
+    Stove & 0.03  & 0.02  & 0.01  & 0.03 \\
+    None  & 0.05  & 0.08  & 0.04  & 0.05 \\
+          &       &       &       &  \\
+    Inside Maintenance: &       &       &       &  \\
+    Excellent & 0.00  & 0.00  & 0.00  & 0.00 \\
+    Good to excellent & 0.00  & 0.00  & 0.00  & 0.00 \\
+    Good  & 0.02  & 0.02  & 0.01  & 0.02 \\
+    Fair to good & 0.01  & 0.01  & 0.00  & 0.01 \\
+    Reasonable & 0.08  & 0.15  & 0.03  & 0.07 \\
+    Moderate to reasonably & 0.04  & 0.08  & 0.02  & 0.03 \\
+    Moderate & 0.70  & 0.67  & 0.77  & 0.70 \\
+    Moderate to bad & 0.03  & 0.02  & 0.05  & 0.03 \\
+    Bad   & 0.12  & 0.06  & 0.11  & 0.14 \\
+          &       &       &       &  \\
+    Outside Maintenance: &       &       &       &  \\
+    Excellent & 0.00  & 0.00  & 0.00  & 0.00 \\
+    Good to excellent & 0.00  & 0.00  & 0.00  & 0.00 \\
+    Good  & 0.01  & 0.01  & 0.00  & 0.01 \\
+    Fair to good & 0.00  & 0.00  & 0.00  & 0.00 \\
+    Reasonable & 0.05  & 0.07  & 0.03  & 0.05 \\
+    Moderate to reasonably & 0.03  & 0.05  & 0.02  & 0.03 \\
+    Moderate & 0.77  & 0.80  & 0.80  & 0.76 \\
+    Moderate to bad & 0.03  & 0.02  & 0.04  & 0.03 \\
+    Bad   & 0.11  & 0.05  & 0.10  & 0.12 \\
+ \hline
+
+    \end{tabular}%
+
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A1 (continued): Descriptive Statistics}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+& Full Sample                      & Definite Label & Indicative Label & Not Labeled \\
+\hline
+&&&&\\
+    Types of insolation: &       &       &       &  \\
+    None  & 0.16  & 0.18  & 0.13  & 0.16 \\
+    1 type & 0.33  & 0.44  & 0.25  & 0.32 \\
+    2 types & 0.12  & 0.11  & 0.13  & 0.12 \\
+    3 types & 0.09  & 0.08  & 0.10  & 0.08 \\
+    4 types & 0.08  & 0.06  & 0.12  & 0.08 \\
+    5 or more types & 0.22  & 0.12  & 0.27  & 0.23 \\
+          &       &       &       &  \\
+    View: &       &       &       &  \\
+    No view & 0.68  & 0.73  & 0.68  & 0.67 \\
+    Forest & 0.02  & 0.02  & 0.02  & 0.03 \\
+    Waterside & 0.08  & 0.05  & 0.08  & 0.08 \\
+    Park  & 0.04  & 0.04  & 0.04  & 0.04 \\
+    Clear view & 0.18  & 0.16  & 0.18  & 0.18 \\
+          &       &       &       &  \\
+    Parking: &       &       &       &  \\
+    No parking & 0.62  & 0.78  & 0.56  & 0.60 \\
+    Parking place & 0.07  & 0.04  & 0.08  & 0.07 \\
+    Only carport & 0.05  & 0.03  & 0.06  & 0.05 \\
+    Only garage & 0.21  & 0.12  & 0.24  & 0.22 \\
+    Garage and carport & 0.02  & 0.01  & 0.02  & 0.02 \\
+    Garage for multiple cars & 0.03  & 0.02  & 0.04  & 0.04 \\
+          &       &       &       &  \\
+    New House & 0.02  & 0.01  & 0.00  & 0.03 \\
+    Located Near a Busy Street & 0.03  & 0.03  & 0.02  & 0.03 \\
+    Located in the city center & 0.09  & 0.06  & 0.08  & 0.10 \\
+    Located in the Outskirts & 0.02  & 0.01  & 0.01  & 0.02 \\
+          &       &       &       &  \\
+    N     & 876538 & 110049 & 95672 & 670817 \\
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Standard errors are clustered at the province*quarter level and are reported in parentheses. Column (1) reports the descriptive statistics for the main characteristics of the average home in our sample. Column (2) reports the descriptive statistics for the homes transacted with a definite label. The process for obtaining a definite label includes a visit from a technician who collects information on detailed thermal characteristics of the home. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient), indicating how good the energy performance of the house is. Dwellings constructed after 1999, or those that are registered as monuments, are exempted from mandatory disclosure of the label. Moreover, if the buyer of the dwelling signs a waiver, the seller is also exempt from providing the label. Column (3) reports the descriptive statistics for the homes transacted with an indicative label. Since the possibility of getting waivers for the EPC was adopted in most transactions, the Dutch government started issuing indicative labels for houses in 2015. Indicative labels are based on public Kadaster (Land Registry) data, so most home improvements undertaken by homeowners were not considered when constructing this label. Therefore, starting in 2015, information on energy performance may have been of two types: either highly informative if the definite label is available, or low informative if only indicative label is available. Column (4) reports the descriptive statistics for the homes transacted without label.
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A2: Detailed OLS and PSM Estimation Results}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+& OLS                      & OLS & OLS & PSM \\
+\hline
+&&&&\\
+Labelled                        & -0.255***  & -0.162***   & -0.166***   &              \\
+                                & (0.003)  & (0.003)   & (0.003)   &              \\
+ATE                             &            &             &             & -0.070***    \\
+                                &            &             &             & (0.006)    \\
+ATT                             &            &             &             & -0.166**     \\
+                                &            &             &             & (0.005)    \\
+ATU                             &            &             &             & -0.041***    \\
+                                &            &             &             & (0.007)    \\
+&&&&\\
+Asking Price (EUR 1,000)            &            & 0.0007*** & 0.0006*** & -0.0009*** \\
+                                &            & (0.00001) & (0.00001) & (0.00002)  \\
+Number of Rooms                 &            & -0.0310***  & -0.0260***  & -0.0020 \\
+                                &            & (0.0013)   & (0.0013)   &   (0.0019)           \\
+Number of Floors                &            & -0.0452***  & -0.0180***  & -0.0129***   \\
+                                &            & (0.0020)   & (0.0027)   & (0.0035)    \\
+Area in sq. meters              &            & 0.00147***  & 0.000442*** & -0.000446*** \\
+                                &            & (0.00006) & (0.00006) & (0.00008)  \\
+&&&&\\
+
+Located Near a Busy Street      &            & 0.0384***   & 0.0941***   & -0.0249*     \\
+                                &            & (0.00810)   & (0.00811)   & (0.0106)     \\
+Located in the City Center      &            & 0.179***    & 0.214***    & -0.176***    \\
+                                &            & (0.00484)   & (0.00491)   & (0.00667)    \\
+Located in the Outskirts        &            & 0.170***    & 0.0720***   & -0.118***    \\
+                                &            & (0.0106)    & (0.0108)    & (0.0156)     \\
+      &            &             &             &              \\
+Parking place                   &            & 0.169***    & 0.0913***   & -0.147***    \\
+                                &            & (0.00556)   & (0.00566)   & (0.00741)    \\
+Only carport                    &            & 0.181***    & 0.108***    & -0.158***    \\
+                                &            & (0.00635)   & (0.00646)   & (0.00852)    \\
+Only garage                     &            & 0.230***    & 0.0906***   & -0.178***    \\
+                                &            & (0.00382)   & (0.00427)   & (0.00557)    \\
+Garage and carport              &            & 0.291***    & 0.123***    & -0.189***    \\
+                                &            & (0.0108)    & (0.0109)    & (0.0145)     \\
+Garage for multiple cars        &            & 0.279***    & 0.128***    & -0.114***    \\
+                                &            & (0.00810)   & (0.00826)   & (0.0111)     \\
+      &            &             &             &              \\
+New House                       &            & 0.433***    & 0.438***    & -1.069***    \\
+                                &            & (0.00962)   & (0.0106)    & (0.0200)     \\
+                         &            &             &             &              \\
+Forest View                           &            & 0.129***    & 0.0754***   & -0.0865***   \\
+                                &            & (0.00918)   & (0.00914)   & (0.0123)     \\
+Waterside View                      &            & 0.0592***   & 0.0272***   & -0.0758***   \\
+                                &            & (0.00524)   & (0.00523)   & (0.00698)    \\
+Park View                           &            & 0.0615***   & 0.0480***   & -0.0784***   \\
+                                &            & (0.00669)   & (0.00667)   & (0.00855)    \\
+Clear view                      &            & 0.0701***   & 0.0444***   & -0.0581***   \\
+                                &            & (0.00368)   & (0.00369)   & (0.00472)    \\
+      &            &             &             &              \\
+Construction Period: 1906-1930                       &            &             & 0.0307***   & 0.119***     \\
+                                &            &             & (0.00741)   & (0.0106)     \\
+Construction Period: 1931-1944                       &            &             & 0.0456***   & 0.0564***    \\
+                                &            &             & (0.00804)   & (0.0115)     \\
+Construction Period: 1945-1959                       &            &             & 0.122***    & 0.433***     \\
+                                &            &             & (0.00802)   & (0.0110)     \\
+Construction Period: 1960-1970                       &            &             & 0.250***    & 0.374***     \\
+                                &            &             & (0.00743)   & (0.0104)     \\
+Construction Period: 1971-1980                       &            &             & 0.240***    & 0.487***     \\
+                                &            &             & (0.00744)   & (0.0104)     \\
+Construction Period: 1981-1990                       &            &             & 0.193***    & 0.558***     \\
+                                &            &             & (0.00769)   & (0.0106)     \\
+Construction Period: 1991-2000                       &            &             & 0.274***    & 0.334***     \\
+                                &            &             & (0.00804)   & (0.0112)     \\
+Construction Period: 2001+                           &            &             & 0.281***    & 0.190***     \\
+                                &            &             & (0.00848)   & (0.0117)     \\
+ \hline
+
+    \end{tabular}%
+
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A2 (continued): Detailed OLS and PSM Estimation Results}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+& OLS                      & OLS & OLS & PSM \\
+\hline
+&&&&\\
+House type: Row House                       &            &             & -0.0378***  & 0.0544***    \\
+                                &            &             & (0.00545)   & (0.00704)    \\
+House type: Semi-detached House             &            &             & 0.153***    & -0.0785***   \\
+                                &            &             & (0.0103)    & (0.0136)     \\
+House type: Corner House                    &            &             & -0.0176**   & 0.0980***    \\
+                                &            &             & (0.00622)   & (0.00795)    \\
+House type: Half of double House            &            &             & 0.121***    & 0.0371***    \\
+                                &            &             & (0.00645)   & (0.00845)    \\
+House type: Detached House                  &            &             & 0.414***    & -0.0286**    \\
+                                &            &             & (0.00669)   & (0.00892)    \\
+&&&&\\
+Heating: Stove                           &            &             & 0.201***    & -0.318***    \\
+                                &            &             & (0.0105)    & (0.0147)     \\
+Heating: Boiler/City/Hot Air             &            &             & 0.0551***   & -0.0271**    \\
+                                &            &             & (0.00701)   & (0.00913)    \\
+Heating: Air conditioner/Solar collector &            &             & 0.0613      & 0.147*       \\
+                                &            &             & (0.0510)    & (0.0641)     \\
+            &            &             &             &              \\
+Inside Maintenance: Good to excellent               &            &             & 0.0220      & -0.0748      \\
+                                &            &             & (0.0579)    & (0.0790)     \\
+Inside Maintenance: Good                            &            &             & 0.172***    & 0.00959      \\
+                                &            &             & (0.0370)    & (0.0501)     \\
+Inside Maintenance: Fair to good                    &            &             & 0.257***    & -0.0859      \\
+                                &            &             & (0.0414)    & (0.0550)     \\
+Inside Maintenance: Reasonable                      &            &             & 0.358***    & 0.0661       \\
+                                &            &             & (0.0365)    & (0.0490)     \\
+Inside Maintenance: Moderate to reasonably          &            &             & 0.410***    & 0.0480       \\
+                                &            &             & (0.0372)    & (0.0497)     \\
+Inside Maintenance: Moderate                        &            &             & 0.571***    & -0.285***    \\
+                                &            &             & (0.0365)    & (0.0490)     \\
+Inside Maintenance: Moderate to bad                 &            &             & 0.417***    & -0.355***    \\
+                                &            &             & (0.0379)    & (0.0508)     \\
+Inside Maintenance: Bad                             &            &             & 0.399***    & -0.363***    \\
+                                &            &             & (0.0372)    & (0.0500)     \\
+            &            &             &             &              \\
+           &            &             &             &              \\
+Outside Maintenance: Good to excellent               &            &             & -0.0767     & -0.00582     \\
+                                &            &             & (0.0679)    & (0.102)      \\
+Outside Maintenance: Good                            &            &             & 0.00556     & 0.172**      \\
+                                &            &             & (0.0439)    & (0.0653)     \\
+Outside Maintenance: Fair to good                    &            &             & -0.0137     & 0.191**      \\
+                                &            &             & (0.0500)    & (0.0727)     \\
+Outside Maintenance: Reasonable                      &            &             & -0.00202    & 0.546***     \\
+                                &            &             & (0.0428)    & (0.0631)     \\
+Outside Maintenance: Moderate to reasonably          &            &             & -0.0589     & 0.668***     \\
+                                &            &             & (0.0435)    & (0.0637)     \\
+Outside Maintenance: Moderate                        &            &             & -0.0976*    & 0.798***     \\
+                                &            &             & (0.0428)    & (0.0630)     \\
+Outside Maintenance: Moderate to bad                 &            &             & -0.159***   & 0.852***     \\
+                                &            &             & (0.0443)    & (0.0647)     \\
+Outside Maintenance: Bad                             &            &             & -0.0258     & 0.800***     \\
+                                &            &             & (0.0436)    & (0.0639)     \\
+
+ \hline
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A2 (continued): Detailed OLS and PSM Estimation Results}
+      \begin{tabular}{lcccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+& OLS                      & OLS & OLS & PSM \\
+\hline
+&&&&\\
+Number of insolations: 1 type                          &            &             & 0.0347***   & 0.141***     \\
+                                &            &             & (0.00440)   & (0.00562)    \\
+Number of insolations: 2 types                         &            &             & 0.0578***   & 0.0817***    \\
+                                &            &             & (0.00544)   & (0.00697)    \\
+Number of insolations: 3 types                         &            &             & 0.0535***   & 0.0936***    \\
+                                &            &             & (0.00603)   & (0.00761)    \\
+Number of insolations: 4 types                         &            &             & 0.0438***   & 0.0691***    \\
+                                &            &             & (0.00640)   & (0.00808)    \\
+Number of insolations: 5 or more types                 &            &             & 0.0530***   & 0.0654***    \\
+                                &            &             & (0.00561)   & (0.00723)    \\
+&&&&\\
+Year and Quarter Fixed Effects&Yes	& Yes &	Yes & Yes\\
+Province Fixed Effects&Yes	& Yes &	Yes & Yes\\
+
+&&&&\\
+
+Constant                          & 4.247***   & 4.014***    & 3.304***    & -1.910***    \\
+                                & (0.00964)  & (0.0108)    & (0.0338)    & (0.0533)     \\
+Number of Observations                               & 853408     & 848916      & 848916      & 848916  \\    
+
+
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses.  Market conditions are proxied by year and quarter fixed effects. The variables in general have the expected signs, as better located and newer houses sell faster that those located away from the center, as well as a general basd state of the maintenance increases the TOM, while a high asking price increases the TOM. Propensity score (PSM) estimation first stage probit results are reported in column (4). The results show that there was some difference in the observables between labeled and non labeled as most of the variables are significant in the first stage, the results are consistent with what we saw in the descriptive statistics as higher asking prices, larger and older houses have a lower probability of being labeled. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+\newpage
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A3: Alternative Matching Methods}
+      \begin{tabular}{lccccc}
+\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                     & PSM-NN1 & PSM-NN5 & IPW & RA & Exact  \\
+\hline
+&&&&&\\
+
+ATE     & -0.070*** & -0.075*** & -0.057*** &  -0.127*** & -0.155***
+    \\
+          & (0.006) &   (0.005)  & (0.005) & (0.004) & (0.003) \\
+N &  848,893 &  848,893 &  848,893 &  848,893  & 252,306   \\    
+\\
+ATT         & -0.166** & -0.167*** & -0.157*** & -0.172*** & -0.181***
+     \\
+          & (0.005) &  (0.006)& (0.004) & (0.004) & (0.005) \\
+N & 310,788 &  500,902 &  848,893 &  848,893  & 252,306  \\       
+\\          
+ATU            & -0.041*** &  -0.047*** & -0.044*** & -0.113*** & -0.139*** \\
+              & (0.007)   & (0.006) & (0.004) & (0.004) & (0.004) \\
+N &  772,297 &  844,490 &  848,893 &  848,893  & 252,306  \\       
+\hline
+
+    \end{tabular}%
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. \added{\textbf{N referes to the number of distinct observations used in the calculation, note that for the NN matching one observation can be used multiple times}}.  Column (1) shows the results for Propensity score matching (PSM) with 1 Nearest Neighbor (NN) estimation, column (2) shows the results for 5 NN PSM estimation, column (3) show the results for Inverse probability weighting, and column (4) uses regression adjustment method to calculate the differences.  *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+\end{tablenotes}
+
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+
+
+\newpage
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A4: PSM Balance check}
+      \begin{tabular}{lccccc}
+\hline
+Variable                                                                    & Unmatched & Mean    &   Mean      &        &                  \\
+                                                                            & Matched   & Treated & Control & \%bias & \%bias reduction \\
+\hline
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Area in sq. meters\end{tabular}              & U         & 109.24  & 116.9   & -19.6  &                  \\
+                                                                            & M         & 109.24  & 110.2   & -2.5   & 87.5             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Number of Floors\end{tabular}                & U         & 2.2438  & 2.2973  & -6     &                  \\
+                                                                            & M         & 2.2438  & 2.2271  & 1.9    & 68.7             \\
+                                                                &           &         &         &        &                  \\
+     Heating: Stove                                                                    & U         & 0.01539 & 0.03327 & -11.6  &                  \\
+                                                                            & M         & 0.01539 & 0.01818 & -1.8   & 84.4             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}  Heating: Boiler/City/Hot Air\end{tabular}             & U         & 0.94626 & 0.92062 & 10.3   &                  \\
+                                                                            & M         & 0.94626 & 0.9403  & 2.4    & 76.7             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}  Heating: Air conditioner/Solar collector\end{tabular} & U         & 0.00074 & 0.0007  & 0.1    &                  \\
+                                                                            & M         & 0.00074 & 0.00068 & 0.2    & -29.4            \\
+\begin{tabular}[c]{@{}l@{}}\end{tabular}             &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Good to excellent\end{tabular}               & U         & 0.00074 & 0.0013  & -1.8   &                  \\
+                                                                            & M         & 0.00074 & 0.00108 & -1.1   & 38.7             \\
+                                                                            &           &         &         &        &                  \\
+Inside Maintenance: Good                                                                        & U         & 0.01245 & 0.01529 & -2.4   &                  \\
+                                                                            & M         & 0.01245 & 0.0152  & -2.4   & 3.2              \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Fair to good\end{tabular}                    & U         & 0.00453 & 0.00512 & -0.8   &                  \\
+                                                                            & M         & 0.00453 & 0.00579 & -1.8   & -113             \\
+                                                                            &           &         &         &        &                  \\
+Inside Maintenance: Reasonable                                                                  & U         & 0.09328 & 0.07135 & 8      &                  \\
+                                                                            & M         & 0.09328 & 0.10732 & -5.1   & 36               \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Moderate to reasonably\end{tabular}          & U         & 0.05086 & 0.03233 & 9.3    &                  \\
+                                                                            & M         & 0.05086 & 0.05962 & -4.4   & 52.7             \\
+                                                                            &           &         &         &        &                  \\
+Inside Maintenance: Moderate                                                                    & U         & 0.71734 & 0.70405 & 2.9    &                  \\
+                                                                            & M         & 0.71734 & 0.69808 & 4.2    & -44.9            \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Moderate to bad\end{tabular}                 & U         & 0.03351 & 0.03251 & 0.6    &                  \\
+                                                                            & M         & 0.03351 & 0.0305  & 1.7    & -202.1           \\
+                                                                            &           &         &         &        &                  \\
+Inside Maintenance: Bad                                                                         & U         & 0.08568 & 0.13502 & -15.8  &                  \\
+                                                                            & M         & 0.08568 & 0.08009 & 1.8    & 88.7             \\
+\begin{tabular}[c]{@{}l@{}}\end{tabular}            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Good to excellent\end{tabular}               & U         & 0.00038 & 0.001   & -2.4   &                  \\
+                                                                            & M         & 0.00038 & 0.00065 & -1     & 56.2             \\
+                                                                            &           &         &         &        &                  \\
+Outside Maintenance: Good                                                                        & U         & 0.00482 & 0.00975 & -5.8   &                  \\
+                                                                            & M         & 0.00482 & 0.00635 & -1.8   & 68.9             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Fair to good\end{tabular}                    & U         & 0.00184 & 0.00327 & -2.8   &                  \\
+                                                                            & M         & 0.00184 & 0.00251 & -1.3   & 53               \\
+                                                                            &           &         &         &        &                  \\
+Outside Maintenance: Reasonable                                                                  & U         & 0.04975 & 0.04894 & 0.4    &                  \\
+                                                                            & M         & 0.04975 & 0.05577 & -2.8   & -642             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Moderate to reasonably\end{tabular}          & U         & 0.03701 & 0.02894 & 4.5    &                  \\
+                                                                            & M         & 0.03701 & 0.04226 & -2.9   & 34.9             \\
+                                                                            &           &         &         &        &                  \\
+Outside Maintenance: Moderate                                                                    & U         & 0.80305 & 0.76088 & 10.2   &                  \\
+                                                                            & M         & 0.80305 & 0.79489 & 2      & 80.7             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Moderate to bad\end{tabular}                 & U         & 0.02887 & 0.02687 & 1.2    &                  \\
+                                                                            & M         & 0.02887 & 0.02681 & 1.3    & -3.3             \\
+                                                                            &           &         &         &        &                  \\
+Outside Maintenance: Bad                                                                         & U         & 0.07347 & 0.11811 & -15.2  &                  \\
+                                                                            & M         & 0.07347 & 0.06941 & 1.4    & 90.9             \\
+                                                                            
+                                                                            
+\hline
+
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A4 (continued): PSM Balance check}
+      \begin{tabular}{lccccc}
+\hline
+Variable                                                                    & Unmatched & Mean    &   Mean      &        &                  \\
+                                                                            & Matched   & Treated & Control & \%bias & \%bias reduction \\
+\hline
+                                                                            &           &         &         &        &                  \\
+
+\begin{tabular}[c]{@{}l@{}}\end{tabular}             &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation:1 type\end{tabular}                          & U         & 0.36168 & 0.32597 & 7.5    &                  \\
+                                                                            & M         & 0.36168 & 0.37931 & -3.7   & 50.6             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 2 types\end{tabular}                         & U         & 0.12413 & 0.12419 & 0      &                  \\
+                                                                            & M         & 0.12413 & 0.12439 & -0.1   & -329.7           \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 3 types\end{tabular}                         & U         & 0.09591 & 0.08399 & 4.2    &                  \\
+                                                                            & M         & 0.09591 & 0.0931  & 1      & 76.4             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 4 types\end{tabular}                         & U         & 0.09067 & 0.07992 & 3.8    &                  \\
+                                                                            & M         & 0.09067 & 0.08465 & 2.2    & 44               \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 5 or more types\end{tabular}                 & U         & 0.19407 & 0.2317  & -9.2   &                  \\
+                                                                            & M         & 0.19407 & 0.17472 & 4.7    & 48.6             \\
+                                                                       &           &         &         &        &                  \\
+View: Forest                                                                      & U         & 0.0183  & 0.02499 & -4.6   &                  \\
+                                                                            & M         & 0.0183  & 0.02184 & -2.4   & 47               \\
+                                                                            &           &         &         &        &                  \\
+View: Waterside                                                                   & U         & 0.06537 & 0.0825  & -6.6   &                  \\
+                                                                            & M         & 0.06537 & 0.06601 & -0.2   & 96.2             \\
+                                                                            &           &         &         &        &                  \\
+View: Park                                                                        & U         & 0.04209 & 0.0443  & -1.1   &                  \\
+                                                                            & M         & 0.04209 & 0.04189 & 0.1    & 90.9             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}View: Clear view\end{tabular}                      & U         & 0.17269 & 0.18248 & -2.6   &                  \\
+                                                                            & M         & 0.17269 & 0.17447 & -0.5   & 81.8             \\
+\begin{tabular}[c]{@{}l@{}}\end{tabular}                   &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Only carport\end{tabular}                    & U         & 0.06285 & 0.06883 & -2.4   &                  \\
+                                                                            & M         & 0.06285 & 0.06026 & 1      & 56.8             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Only garage\end{tabular}                     & U         & 0.04604 & 0.05317 & -3.3   &                  \\
+                                                                            & M         & 0.04604 & 0.04489 & 0.5    & 83.9             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Garage and carport\end{tabular}              & U         & 0.17925 & 0.2212  & -10.5  &                  \\
+                                                                            & M         & 0.17925 & 0.18409 & -1.2   & 88.5             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Garage for multiple cars\end{tabular}        & U         & 0.01438 & 0.01752 & -2.5   &                  \\
+                                                                            & M         & 0.01438 & 0.01456 & -0.1   & 94.3             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}New House\end{tabular}                       & U         & 0.00396 & 0.02565 & -18    &                  \\
+                                                                            & M         & 0.00396 & 0.00502 & -0.9   & 95.1             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Asking Price (EUR 1,000)\end{tabular}            & U         & 226.07  & 267.06  & -31.4  &                  \\
+                                                                            & M         & 226.07  & 231.13  & -3.9   & 87.7             \\                                                                      
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Located Near a Busy Street\end{tabular}      & U         & 0.02482 & 0.02996 & -3.1   &                  \\
+                                                                            & M         & 0.02482 & 0.02762 & -1.7   & 45.5             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Located in the city center\end{tabular}      & U         & 0.06758 & 0.09566 & -10.3  &                  \\
+                                                                            & M         & 0.06758 & 0.07388 & -2.3   & 77.6             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Located in the Outskirts\end{tabular}        & U         & 0.01045 & 0.02028 & -8     &                  \\
+                                                                            & M         & 0.01045 & 0.0146  & -3.4   & 57.7             \\
+\begin{tabular}[c]{@{}l@{}}:\end{tabular}           &           &         &         &        &                  \\
+Year of Construction: 1906-1930                                                                   & U         & 0.0836  & 0.11789 & -11.4  &                  \\
+                                                                            & M         & 0.0836  & 0.08932 & -1.9   & 83.3             \\
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 1931-1944                                                                   & U         & 0.05148 & 0.07844 & -11    &                  \\
+                                                                            & M         & 0.05148 & 0.05462 & -1.3   & 88.4             \\
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 1945-1959                                                                   & U         & 0.09232 & 0.07552 & 6.1    &                  \\
+                                                                            & M         & 0.09232 & 0.0961  & -1.4   & 77.4             \\
+
+\hline
+
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}% 
+
+
+
+
+\begin{table}[H]
+\scriptsize
+  \centering
+  \caption*{Table A4 (continued): PSM Balance check}
+      \begin{tabular}{lccccc}
+\hline
+Variable                                                                    & Unmatched & Mean    &    Mean     &        &                  \\
+                                                                            & Matched   & Treated & Control & \%bias & \%bias reduction \\
+\hline
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 1960-1970                                                                   & U         & 0.16854 & 0.1451  & 6.4    &                  \\
+                                                                            & M         & 0.16854 & 0.17175 & -0.9   & 86.3             \\
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 1971-1980                                                                   & U         & 0.18438 & 0.14627 & 10.3   &                  \\
+                                                                            & M         & 0.18438 & 0.18985 & -1.5   & 85.6             \\
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 1981-1990                                                                   & U         & 0.16316 & 0.11749 & 13.2   &                  \\
+                                                                            & M         & 0.16316 & 0.15859 & 1.3    & 90               \\
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 1991-2000                                                                   & U         & 0.1198  & 0.13123 & -3.5   &                  \\
+                                                                            & M         & 0.1198  & 0.10866 & 3.4    & 2.6              \\
+                                                                            &           &         &         &        &                  \\
+Year of Construction: 2001+                                                                       & U         & 0.10861 & 0.13359 & -7.7   &                  \\
+                                                                            & M         & 0.10861 & 0.09606 & 3.8    & 49.8             \\
+\begin{tabular}[c]{@{}l@{}}\end{tabular}                  &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Row House\end{tabular}                       & U         & 0.30643 & 0.27366 & 7.2    &                  \\
+                                                                            & M         & 0.30643 & 0.28812 & 4      & 44.1             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Semi-detached House\end{tabular}             & U         & 0.01873 & 0.02196 & -2.3   &                  \\
+                                                                            & M         & 0.01873 & 0.0187  & 0      & 99.2             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Corner House\end{tabular}                    & U         & 0.12979 & 0.11638 & 4.1    &                  \\
+                                                                            & M         & 0.12979 & 0.12804 & 0.5    & 86.9             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Half of double House\end{tabular}            & U         & 0.12899 & 0.14806 & -5.5   &                  \\
+                                                                            & M         & 0.12899 & 0.12857 & 0.1    & 97.8             \\
+                                                                            &           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Detached House\end{tabular}                  & U         & 0.08994 & 0.13373 & -13.9  &                  \\
+                                                                            & M         & 0.08994 & 0.10768 & -5.6   & 59.5             \\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\scriptsize
+\item \textit{Notes:} This table reports the balance before and after matching for the PSM estimation results reported in Table 2 column 4. These statistics indicate a reduction of the bias in most of the covariates used for the PSM, pointing to an increase in the balance of the covariates after matching.
+\end{tablenotes}
+
+\end{table}
+
+
+
+
+\end{document}
