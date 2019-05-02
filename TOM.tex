@@ -124,7 +124,7 @@ The paper continues with a discussion of our theoretical framework on informatio
 
 Homes are valuable but illiquid assets, with significant informational asymmetries, as sellers have more information about their homes than prospective buyers. The success of a home transaction depends on the combination of the appropriate sales price and the  speed of sale. Sellers typically strive for a quick sale at the highest possible transaction price. \cite{taylor1999time} showed that while prices can be boosted by not disclosing all negative attributes, buyers shy away from homes for which relevant qualities are unknown. Buyers prefer to bid on homes with more complete information – even if that information is not necessarily positive – as they want to be protected from having to undertake time-consuming activities to retrieve this information. This adaptation from \cite{akerlof1970vthe}'s Lemon's problem to the housing market predicts that the speed of sale increases with the supply of information. Given that up until 2008 energy efficiency was not part of the standard information process in the Dutch housing market, it is safe to say that since the introduction of Dutch EPC in 2008, this supply of information increased as a result. Energy labels have provided prospective buyers with clear and simple information regarding the relative energy use of their next home. Based on this additional information, buyers became better positioned to take this information into account when comparing alternative homes, and when entering price negotiations.   
 
-As a theoretical framework, we modify the \cite{taylor1999time} model to identify the effects of energy efficiency information on the time that a home is on the market. Suppose an individual (seller) owns a house that she wishes to sell. There is also an infinite pool of individuals (buyers) who are potentially interested in purchasing the house. The ex-post value of the house for consumer $i$ is $q \theta^i$, where $q$ is a house-specific characteristic (quality) and $\theta^i$ is a consumer-specific characteristic (taste). The value of the house for the seller is  $q \theta^s$. The seller is presumed to know the quality, but not the realizations of consumer tastes. It is common knowledge that each $\theta^i$ is the realization of an independent draw from the distribution $F(\theta)$, while the quality and seller's valuation is unknown to the buyers and is costly to find out. 
+As a theoretical framework, we modify the \cite{taylor1999time} model to identify the effects of energy efficiency information on the time that a home is on the market.\footnote{In this model, we assume that public inspection does not have a direct impact on average house price. While the outcome of the inspection can affect the individual house prices positively or negatively depending on the outcome, certification in itself should have no effect on average house price, assuming that its presence (not the outcome) does not signal any information on house quality. In Section 5, we show that this assumption is verified by the data.}  Suppose an individual (seller) owns a house that she wishes to sell. There is also an infinite pool of individuals (buyers) who are potentially interested in purchasing the house. The ex-post value of the house for consumer $i$ is $q \theta^i$, where $q$ is a house-specific characteristic (quality) and $\theta^i$ is a consumer-specific characteristic (taste). The value of the house for the seller is  $q \theta^s$. The seller is presumed to know the quality, but not the realizations of consumer tastes. It is common knowledge that each $\theta^i$ is the realization of an independent draw from the distribution $F(\theta)$, while the quality and seller's valuation is unknown to the buyers and is costly to find out. 
 
 We assume that the utility of seller depends both on the speed of sale (TOM) and the price of the transaction, so she has a utility of the form:
 
@@ -140,7 +140,7 @@ To simplify the model, we assume that there is one quality inspection that selle
 E(TOM) = \frac{1}{\left( \lambda + \mu_k \right) \left(1 - F(\theta^s) \right)}
 \end{equation}
 		
-\noindent so the expected time on the market increases with a higher valuation of the seller – that is, a higher reservation price – and less public information, all of which is consistent with the models of \cite{taylor1999time}, \cite{kurlat2015testing}, and \cite{han2016role}. Given that we assume that $\mu_1 > \mu_2$, having the inspection will reduce the expected time on the market. In our model, we assume that public inspection does not have a direct impact on average house price. While the outcome of the inspection can affect the individual house prices positively or negatively depending on the outcome, certification in itself should have no effect on average house price.
+\noindent so the expected time on the market increases with a higher valuation of the seller – that is, a higher reservation price – and less public information, all of which is consistent with the models of \cite{taylor1999time}, \cite{kurlat2015testing}, and \cite{han2016role}. Given that we assume that $\mu_1 > \mu_2$, having the inspection will reduce the expected time on the market.
 
 According to this outcome, if we assume rationality, all sellers should apply for an inspection. In practice, however, that is not the case. There are two possible explanations for this fact. One is that the cost and time of the inspection is greater than the benefit. In the Netherlands, it should take a maximum of two weeks to receive the inspection results at a cost of \euro 200, which does not seem cost-prohibitive for sellers.\footnote{200 Euros is a relatively low cost for homeowners, given that the mean value of the houses sold in our sample was \euro 238,000 in the Netherlands. However, as shown by \cite{merlo2015home}, at least in terms of list price stickiness, menu costs as small as one percent of the estimated house value are enough to produce a high degree of stickiness.} The second possibility is that sellers are not willing to divulge information about the house, as they may be selling low-quality houses and do not wish to be compared with other high-quality homes. If quality can be perfectly observed, as we assumed before, then this is not a problem, as buyers will learn the quality of the house anyway; if the quality cannot be properly inferred, then there may be reasons not to have a public inspection as it may reduce the price of the house.
 
@@ -159,11 +159,11 @@ Since the possibility of getting waivers for the EPC was adopted in most transac
 
 \section{Data}
 
-In order to identify the impact of the availability of EPC on the speed of sale, we utilized the house transaction data for the years 2008 through 2016 obtained from the Dutch Association of Realtors and Appraisers (NVM). This data set contains around 70 percent of the house sales in the Netherlands. The NVM data includes information on vital house characteristics, such as: the transaction price, date of transaction, time on the market, location, number of rooms, floor space, number of floors, garage type, year the house was built, type of house, insulation, condition of the inner and outer maintenance, heating, and locational attributes like province, whether it is located downtown, outside the village, near a busy street, etc.  We also have information on the initial list price of the house. NVM realtors recommend an asking price for sellers to list their houses, but it is the seller who decides the list price. List prices are not binding, as the seller can refuse to sell at the list price or even try to negotiate above it. The seller can change the list price, but the history of list prices is not available to the buyer.\footnote{This is true for the Dutch housing market as whole, as no alternative data sources record this evolution of asking prices for individual dwellings.} 
+In order to identify the impact of the availability of EPC on the speed of sale, we utilized the house transaction data for the years 2008 through 2016 obtained from the Dutch Association of Realtors and Appraisers (NVM). This data set contains around 70 percent of the house sales in the Netherlands. The NVM data includes information on vital house characteristics, such as: the transaction price, date of transaction, time on the market, location, number of rooms, floor space, number of floors, garage type, year the house was built, type of house, insulation, condition of the inner and outer maintenance, heating, and locational attributes like province, whether it is located downtown, outside the village, near a busy street, etc.\footnote{In the NVM dataset, the percentage of homes that are withdrawn from the market is around 3.4 percent and we excluded these observations from our analysis. Nevertheless, while these houses do tend to have longer TOM as well as higher asking prices, the label distribution does not seem to differ between those excluded and those included in the analysis.}   We also have information on the initial list price of the house. NVM realtors recommend an asking price for sellers to list their houses, but it is the seller who decides the list price. List prices are not binding, as the seller can refuse to sell at the list price or even try to negotiate above it. The seller can change the list price, but the history of list prices is not available to the buyer.\footnote{This is true for the Dutch housing market as whole, as no alternative data sources record this evolution of asking prices for individual dwellings.} 
 
 To obtain information on the presence of an EPC, we linked the NVM database to the EPC database that is provided by RVO (a government agency). The EPC data set includes information on the energy rating of the house and the date of the EPC adoption. Everything except the history of list prices is freely available online for buyers in one of the NVM-associated websites that advertise listings. 
 
-The final sample consists of 876,538 transacted homes, of which 110,049 (12.5\%) are transacted with definite label and 95,672 (11\%) are transacted with indicative label. Table 1 documents the descriptive statistics for the main variables of interest.\footnote{Table A1 in the Appendix presents the descriptive statistics for the other control variables used in the analysis. These characteristics are commonly used in the available literature to explain the time on the market (see \cite{sirmans2005composition,tucker2013days,merlo2004bargaining}).} These statistics indicate that labeled houses are similar to the non-labeled homes regarding most characteristics, except for the fact that the former were sold faster, tend to be cheaper and smaller, and have lower asking prices. The statistics also show that the houses that adopted an indicative label have very similar characteristics to the non-labeled homes. Therefore, the difference in size, asking price, transaction price, and time on the market is more evident when we compare the non-labeled homes with the homes that have a definite label, and will be controlled for in our subsequent analyses.
+The final sample consists of 876,538 transacted homes, of which 110,049 (12.5\%) are transacted with definite label and 95,672 (11\%) are transacted with indicative label.\footnote{In the original data set, some of the homes have both definite and indicative labels. The share of these homes is around 3\% in the original transaction data set. For these homes, we include information only on the definite labels in the analysis (as it is more informative as compared to indicative label)} Table 1 documents the descriptive statistics for the main variables of interest.\footnote{Table A1 in the Appendix presents the descriptive statistics for the other control variables used in the analysis. These characteristics are commonly used in the available literature to explain the time on the market (see \cite{sirmans2005composition,tucker2013days,merlo2004bargaining}).} These statistics indicate that labeled houses are similar to the non-labeled homes regarding most characteristics, except for the fact that the former were sold faster, tend to be cheaper and smaller, and have lower asking prices. The statistics also show that the houses that adopted an indicative label have very similar characteristics to the non-labeled homes. Therefore, the difference in size, asking price, transaction price, and time on the market is more evident when we compare the non-labeled homes with the homes that have a definite label, and will be controlled for in our subsequent analyses.
 
 \begin{center}
 -- Insert Table 1 --
@@ -202,20 +202,20 @@ $TOM_i$ is the logarithm of the number of days passed between the first day hous
 
 \subsection{OLS and PSM Estimations}
 
-Table 2 reports the condensed OLS estimation results.\footnote{An extended table of our regression coefficients is reported in the Appendix, Table A2. Most of the estimated coefficients for } In the first column, we have only included province and time fixed effects as control variables. In the second column, we have also included the asking price and a set of house characteristics, while in the third column we have added controls for variations in maintenance and insulation. For all three specifications, we document that houses with an EPC tend to be sold quicker than those without. Houses with an EPC spend 16.2 percent less time on the market than those without it, controlling for all observable characteristics that might affect the time on the market. Thus, despite the fact that some of the difference can be explained by house and maintenance characteristics, the EPCs appear to play a role in the speed of the sale.
+Table 2 reports the condensed OLS estimation results.\footnote{An extended table of our regression coefficients is reported in the Appendix, Table A2. The estimated coefficients for the control variables in general have the expected signs, as better located and newer houses sell faster than those located away from the center, as well as a general bad state of the maintenance increases the TOM, while a high initial asking price increases the TOM.} In the first column, we have only included province and time fixed effects as control variables. In the second column, we have also included the asking price and a set of house characteristics, while in the third column we have added controls for variations in maintenance and insulation. For all three specifications, we document that houses with an EPC tend to be sold quicker than those without. Houses with an EPC spend 16.2 percent less time on the market than those without it, controlling for all observable characteristics that might affect the time on the market. Thus, despite the fact that some of the difference can be explained by house and maintenance characteristics, the EPCs appear to play a role in the speed of the sale.
 
 \begin{center}
 -- Insert Table 2 --
 \end{center}
 
-To further check the validity of our OLS results, we apply a propensity score matching (PSM) approach. As we mentioned earlier, our analysis may suffer from a selection bias, especially during the first period when energy ratings were voluntary. The summary statistics already reveal that, due to this opting-out opportunity, the labeled and non-labeled samples differ on a number of housing characteristics. The PSM approach enables us to compare the time on the market for the labeled dwellings with non-labeled dwellings that have similar observable characteristics, assuming that there are no unobservable differences between them. In order to do this, we run a logit model on having a label using as covariates the same controls as in the previous OLS regressions. With this, we estimate the propensity score for each observation. Since our model includes continuous variables, exact matching is not possible. Therefore, the matching was done by choosing the nearest neighbor based on the estimated propensity scores.\footnote{\added{\textbf{The results for other matching methods (matching with 1 nearest neigbor (NN), matching with 5 NN, inverse probability weighting and regression adjustment approach) are reported in the Appendix, Table A3. These results indicate that presence of label reduces the TOM by around 5.6\% to 12.7\% percent, which is close to our previous findings.}}} The result of the balancing for the average treatment effect on the treated (ATT) can be seen in Figure 4, which shows a reduction in the difference of the distributions of propensity scores between labeled and non-labeled homes. Finally, as we use an estimated propensity score, we have to take into account the uncertainty this represents. We use the method proposed by \cite{abadie2016matching} which allows us to consistently estimate the variance of the large sample distribution of the propensity scores.
+To further check the validity of our OLS results, we apply a propensity score matching (PSM) approach. As we mentioned earlier, our analysis may suffer from a selection bias, especially during the first period when energy ratings were voluntary. The summary statistics already reveal that, due to this opting-out opportunity, the labeled and non-labeled samples differ on a number of housing characteristics. The PSM approach enables us to compare the time on the market for the labeled dwellings with non-labeled dwellings that have similar observable characteristics, assuming that there are no unobservable differences between them. In order to do this, we run a logit model on having a label using as covariates the same controls as in the previous OLS regressions. With this, we estimate the propensity score for each observation. Since our model includes continuous variables, exact matching is not possible. Therefore, the matching was done by choosing the nearest neighbor based on the estimated propensity scores.\footnote{The results for other matching methods (matching with 1 nearest neigbor (NN), matching with 5 NN, inverse probability weighting and regression adjustment approach) are reported in the Appendix, Table A3. These results indicate that presence of label reduces the TOM by around 5.6 to 12.7 percent, which is close to our previous findings.} The result of the balancing for the average treatment effect on the treated (ATT) can be seen in Figure 4, which shows a reduction in the difference of the distributions of propensity scores between labeled and non-labeled homes. Finally, as we use an estimated propensity score, we have to take into account the uncertainty this represents. We use the method proposed by \cite{abadie2016matching} which allows us to consistently estimate the variance of the large sample distribution of the propensity scores.
 
 \begin{center}
 -- Insert Figure 4 --
 \end{center}
 
 
-In column 4 of Table 2, we report the results of our PSM estimation. Although the estimated coefficient is smaller than the OLS estimates (7 percent reduction in TOM as opposed to 16.2 percent for OLS), the difference in TOM between labeled and non-labeled homes is still statistically significant. The difference between the results of OLS and PSM estimations indicates that differences in observable characteristics of labeled and non-labeled houses influence the size of the estimated label effect on TOM. That is, the average treatment effect on the treated (ATT) and the average treatment effect on the untreated (ATU) are different.\footnote{We should note that our PSM approach is not able to eliminate the risk of bias that might occur due to unobservable home characteristics or seller-specific characteristics. In the next section, we propose an alternative approach that eliminates the potential correlation between the presence of label and seller-specific factors. Unobserved house characteristics might also lead to a bias in case these characteristics are correlated with the label adoption decision. Fortunately, we are able to control for the time-invariant unobserved house specific characteristics in our repeated sales analysis, which will be discussed in more detail in section 5.3.}
+In column 4 of Table 2, we report the results of our PSM estimation.\footnote{Propensity score matching (PSM) estimation first stage probit results are reported in column (4) of Table A2 in the appendix. The results show that there was some difference in the observables between labeled and non labeled homes as most of the variables are significant in the first stage. The results are consistent with what we observe in the descriptive statistics as higher asking prices, larger and older houses have a lower probability of being labeled.} Although the estimated coefficient is smaller than the OLS estimates (7 percent reduction in TOM as opposed to 16.2 percent for OLS), the difference in TOM between labeled and non-labeled homes is still statistically significant. The difference between the results of OLS and PSM estimations indicates that differences in observable characteristics of labeled and non-labeled houses influence the size of the estimated label effect on TOM. That is, the average treatment effect on the treated (ATT) and the average treatment effect on the untreated (ATU) are different.\footnote{We should note that our PSM approach is not able to eliminate the risk of bias that might occur due to unobservable home characteristics or seller-specific characteristics. In the next section, we propose an alternative approach that eliminates the potential correlation between the presence of label and seller-specific factors. Unobserved house characteristics might also lead to a bias in case these characteristics are correlated with the label adoption decision. Fortunately, we are able to control for the time-invariant unobserved house specific characteristics in our repeated sales analysis, which will be discussed in more detail in section 5.3.}
 
 As explained in our theoretical model, TOM is not the only decision that home sellers make but they also need to take the price of the house into consideration. While there are studies relating to the effect of the rating of the label on the price, i.e. ``A" labeled houses sell for higher prices than comparable ``G" labeled houses, there is no reason to believe that labeling in itself should affect the price. In order to check this, we use the same specifications as in columns 3 and 4 of Table 2 but this time with the transaction price as the dependent variable. Table 3 reports the results of this exercise. Although the OLS results indicate a significant positive effect on house prices, this effect is no longer significant when we apply PSM approach, which is in line with our expectations.
 
@@ -279,6 +279,8 @@ Column 1 of Table 8 presents the OLS estimation results for these comparisons an
 
 The second method we used is to compare the houses that were labeled before sale with those that received their label after the sale. That is, we estimate a regression for every value of the label including only the houses that received that label. The second column of Table 8 confirms the effect found in the previous approach. Nonetheless, the difference between effects in the high-performance dwellings and the low-performance dwellings is not as large.
 
+These results indicate that although the impact of label on time on the market is more prominent for the energy-efficient homes, presence of label also reduces the time on the market for inefficient homes. This result might seem surprising as we can expect that better informed buyers would shy away from these low energy efficiency homes. However, this finding might be a result of shorter bargaining process, as the sellers of these inefficient homes do not have information advantage anymore. 
+
 \section{Conclusions}
 
 Our results show that energy ratings help to reduce the time on the market by 7–12 percent and that this effect is consistent across specifications and market subsections. Given that we control for different possible mechanisms that may reduce TOM, our results indicate that the information conveyed by energy performance certificates helps to limit the information asymmetry between buyers and sellers, which speeds up the sale by an average of 15 - 25 days. This effect changed over time, along with the information content of the certificates. After the initial engineering certificates, issued after an on-site inspection of the dwelling, were replaced by more indicative mass appraisal-based certificates, the speed of sale effect was halved. Finally, our results show evidence that this speed of sale effect differs across rating outcomes. Being rated has the strongest impact in the most favorable label categories. Being labeled ``A" speeds up the sale by over 28 percent, while being labeled ``F" reduced the time on the market by only 6 percent. 
@@ -317,7 +319,7 @@ All in all, our results show that energy labels affect housing transactions beyo
 		\scriptsize
 		\begin{tablenotes}
 		\scriptsize
-\item \textit{Notes:} This figure shows the distribution of label ratings for the homes that are transacted with a definite and indicative label, separately. The process for obtaining a definite label includes a visit from a technician who collects information on detailed thermal characteristics of the home. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient). The Dutch government started issuing indicative labels for houses in 2015. Indicative labels are based on public Kadaster (Land Registry) data, so most home improvements undertaken by homeowners were not considered when constructing this label. Therefore, starting in 2015, information on energy performance may have been of two types: either highly informative if the definite label is available, or low informative if only indicative label is available. 
+\item \textit{Notes:} This figure shows the distribution of label ratings for the homes that are transacted with a definite and indicative label, separately. Both label types use the same rating categories. Therefore, the ratings given by both label types indicate the same energy efficiency level. The process for obtaining a definite label includes a visit from a technician who collects information on detailed thermal characteristics of the home. With this information, the expert assigns a label that ranges from A (most energy-efficient) to G (least energy-efficient). The Dutch government started issuing indicative labels for houses in 2015. Indicative labels are based on public Kadaster (Land Registry) data, so most home improvements undertaken by homeowners were not considered when constructing this label. Therefore, starting in 2015, information on energy performance may have been of two types: either highly informative if the definite label is available, or low informative if only indicative label is available. 
 
 
 \end{tablenotes}
@@ -441,7 +443,7 @@ N	& 853,408 &	848,916 &	848,916 &	848,893 \\
     \end{tabular}%
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (4), the coefficient of EPC represents the average treatment effect (ATE) from propensity score (PSM) estimation. In column (4), ``Asking price" is used in the first stage to calculate the propensity score.   *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (4), the coefficient of EPC represents the average treatment effect (ATE) from propensity score (PSM) estimation. In column (4), besides other control variables, ``Asking price" is also included in the first stage to calculate the propensity score.   *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
 \end{tablenotes}
 
   \label{tab:addlabel}%
@@ -481,7 +483,7 @@ N	& 848,916 &	848,893 \\
     \end{tabular}%
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} Dependent variable is the transaction price in thousands of euros. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (2), the coefficient of EPC represents the average treatment effect (ATE) from propensity score (PSM) estimation. In column (2), ``Asking price" is also included in the first stage to calculate the propensity score.   *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\item \textit{Notes:} Dependent variable is the transaction price in thousands of euros. Standard errors are clustered at the province*quarter level and are reported in parentheses. We apply the \citep{abadie2016matching} correction to calculate the standard errors for PSM. Market conditions are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (2), the coefficient of EPC represents the average treatment effect (ATE) from propensity score (PSM) estimation. In column (2), besides other control variables, ``Asking price" is also included in the first stage to calculate the propensity score.   *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
 \end{tablenotes}
 
   \label{tab:addlabel}%
@@ -560,7 +562,7 @@ N &	18482 &	5302 \\
     \end{tabular}%
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market for the second sale of the house. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (1) we compare houses that were labeled during the first sale and conserve the same label for the second sale versus houses that were not labeled at any point in time. In column (2) we compare houses that acquired a label for the second sale versus those that already had it for the first sale. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market for the second sale of the house. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions at the time of listing are proxied by year and quarter fixed effects. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. In column (1) we compare houses that were labeled during the first sale and conserve the same label for the second sale versus houses that were not labeled at any point in time. \added{\textbf{In column (2) we compare houses that were labeled during the first sale and conserve the same label for the second sale versus the homes that were sold for a second time with a label that is adopted by the current seller.}} *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
 \end{tablenotes}
 
   \label{tab:addlabel}%
@@ -649,7 +651,7 @@ N & 	848,916	& 756,514 &	197,361 \\
     \end{tabular}%
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions at the time of listing are proxied by year and quarter fixed effects. In columns (2) and (3), the coefficients of ``Label" represent the average treatment effect (ATE) from propensity score (PSM) estimation. For PSM estimations, ``Asking price" is used in the first stage to calculate the propensity score. For this, we used a serial probit analysis; that is, we estimated a binomial probit where the definite (indicative) label is the treatment and excluded the dwellings with indicative (definite) labels from the estimation. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. 
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. Market conditions at the time of listing are proxied by year and quarter fixed effects. In columns (2) and (3), the coefficients of ``Label" represent the average treatment effect (ATE) from propensity score (PSM) estimation. For PSM estimations, besides other control variables, ``Asking price" is also included in the first stage to calculate the propensity score. For this, we used a serial probit analysis; that is, we estimated a binomial probit where the definite (indicative) label is the treatment and excluded the dwellings with indicative (definite) labels from the estimation. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. 
 \end{tablenotes}
 
   \label{tab:addlabel}%
@@ -700,7 +702,7 @@ G	& 0.014 & 18,627 & -0.067$^{***}$ & 24,316 \\
     \end{tabular}%
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. Column (1) reports the estimated differences in TOM  between labeled and non-labeled homes for each predicted energy rating category, \added{ \textbf{as the predicted and actual label may differ we also include whether the predicted label was higher or lower than the given label, i.e. a value of 1 indicates that the predicted label is higher, 0 that is the same and -1 that is lower, to differentiate between the effect of the result of the inspection and the certification itself}}. Column (2) reports the estimated differences in TOM  between homes that are labeled before transaction and the homes that are labeled after transaction for each given energy rating category. We used the same control variables for all regressions. Market conditions are proxied by year and quarter fixed effects. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses. Column (1) reports the estimated differences in TOM  between labeled and non-labeled homes for each predicted energy rating category. As the predicted and actual label may differ we also include whether the predicted label was higher or lower than the given label, i.e. a value of 1 indicates that the predicted label is higher, 0 that is the same and -1 that is lower, to differentiate between the effect of the result of the inspection and the certification itself. Column (2) reports the estimated differences in TOM  between homes that are labeled before transaction and the homes that are labeled after transaction for each given energy rating category. We used the same control variables for all regressions. Market conditions are proxied by year and quarter fixed effects. Dwelling characteristics include size of the house in square meters, number of rooms, number of floors, type of the house, and the type of parking place. Location-related characteristics include province fixed effects, the location of the house relative to a busy street, distance from the city center, and the view of the house. Maintenance and insolation variables include the state of external and internal maintenance, type of heating system, number of insulation measures, and the year that the house was built. *** p$<$0.01, ** p$<$0.05, * p$<$0.1. 
 \end{tablenotes}
 
   \label{tab:addlabel}%
@@ -1042,14 +1044,15 @@ Province Fixed Effects&Yes	& Yes &	Yes & Yes\\
 Constant                          & 4.247***   & 4.014***    & 3.304***    & -1.910***    \\
                                 & (0.00964)  & (0.0108)    & (0.0338)    & (0.0533)     \\
 Number of Observations                               & 853408     & 848916      & 848916      & 848916  \\    
-
+$R^2$ & 0.0518 & 0.1067 & 0.1160 & 0.2404
+\\
 
 \hline
 
     \end{tabular}%
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses.  Market conditions are proxied by year and quarter fixed effects. The variables in general have the expected signs, as better located and newer houses sell faster that those located away from the center, as well as a general basd state of the maintenance increases the TOM, while a high asking price increases the TOM. Propensity score (PSM) estimation first stage probit results are reported in column (4). The results show that there was some difference in the observables between labeled and non labeled as most of the variables are significant in the first stage, the results are consistent with what we saw in the descriptive statistics as higher asking prices, larger and older houses have a lower probability of being labeled. *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
+\item \textit{Notes:} Dependent variable is the natural logarithm of number of days on the market. Standard errors are clustered at the province*quarter level and are reported in parentheses.  Market conditions are proxied by year and quarter fixed effects. Propensity score (PSM) estimation first stage probit results are reported in column (4). \added{ \textbf{$R^2$ reported for the OLS estimations and Pseudo $R^2$ is reported for the first stage of the PSM.}}  *** p$<$0.01, ** p$<$0.05, * p$<$0.1.
 \end{tablenotes}
 
   \label{tab:addlabel}%
@@ -1103,6 +1106,7 @@ N &  772,297 &  844,490 &  848,893 &  848,893  & 252,306  \\
 
 
 
+
 \newpage
 \begin{table}[H]
 \scriptsize
@@ -1110,73 +1114,62 @@ N &  772,297 &  844,490 &  848,893 &  848,893  & 252,306  \\
   \caption*{Table A4: PSM Balance check}
       \begin{tabular}{lccccc}
 \hline
-Variable                                                                    & Unmatched & Mean    &   Mean      &        &                  \\
-                                                                            & Matched   & Treated & Control & \%bias & \%bias reduction \\
+Variable                                                                 & Treated & Control & \%bias & \%bias reduction & t-test \\
 \hline
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Area in sq. meters\end{tabular}              & U         & 109.24  & 116.9   & -19.6  &                  \\
-                                                                            & M         & 109.24  & 110.2   & -2.5   & 87.5             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Number of Floors\end{tabular}                & U         & 2.2438  & 2.2973  & -6     &                  \\
-                                                                            & M         & 2.2438  & 2.2271  & 1.9    & 68.7             \\
-                                                                &           &         &         &        &                  \\
-     Heating: Stove                                                                    & U         & 0.01539 & 0.03327 & -11.6  &                  \\
-                                                                            & M         & 0.01539 & 0.01818 & -1.8   & 84.4             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}  Heating: Boiler/City/Hot Air\end{tabular}             & U         & 0.94626 & 0.92062 & 10.3   &                  \\
-                                                                            & M         & 0.94626 & 0.9403  & 2.4    & 76.7             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}  Heating: Air conditioner/Solar collector\end{tabular} & U         & 0.00074 & 0.0007  & 0.1    &                  \\
-                                                                            & M         & 0.00074 & 0.00068 & 0.2    & -29.4            \\
-\begin{tabular}[c]{@{}l@{}}\end{tabular}             &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Good to excellent\end{tabular}               & U         & 0.00074 & 0.0013  & -1.8   &                  \\
-                                                                            & M         & 0.00074 & 0.00108 & -1.1   & 38.7             \\
-                                                                            &           &         &         &        &                  \\
-Inside Maintenance: Good                                                                        & U         & 0.01245 & 0.01529 & -2.4   &                  \\
-                                                                            & M         & 0.01245 & 0.0152  & -2.4   & 3.2              \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Fair to good\end{tabular}                    & U         & 0.00453 & 0.00512 & -0.8   &                  \\
-                                                                            & M         & 0.00453 & 0.00579 & -1.8   & -113             \\
-                                                                            &           &         &         &        &                  \\
-Inside Maintenance: Reasonable                                                                  & U         & 0.09328 & 0.07135 & 8      &                  \\
-                                                                            & M         & 0.09328 & 0.10732 & -5.1   & 36               \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Moderate to reasonably\end{tabular}          & U         & 0.05086 & 0.03233 & 9.3    &                  \\
-                                                                            & M         & 0.05086 & 0.05962 & -4.4   & 52.7             \\
-                                                                            &           &         &         &        &                  \\
-Inside Maintenance: Moderate                                                                    & U         & 0.71734 & 0.70405 & 2.9    &                  \\
-                                                                            & M         & 0.71734 & 0.69808 & 4.2    & -44.9            \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Moderate to bad\end{tabular}                 & U         & 0.03351 & 0.03251 & 0.6    &                  \\
-                                                                            & M         & 0.03351 & 0.0305  & 1.7    & -202.1           \\
-                                                                            &           &         &         &        &                  \\
-Inside Maintenance: Bad                                                                         & U         & 0.08568 & 0.13502 & -15.8  &                  \\
-                                                                            & M         & 0.08568 & 0.08009 & 1.8    & 88.7             \\
-\begin{tabular}[c]{@{}l@{}}\end{tabular}            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Good to excellent\end{tabular}               & U         & 0.00038 & 0.001   & -2.4   &                  \\
-                                                                            & M         & 0.00038 & 0.00065 & -1     & 56.2             \\
-                                                                            &           &         &         &        &                  \\
-Outside Maintenance: Good                                                                        & U         & 0.00482 & 0.00975 & -5.8   &                  \\
-                                                                            & M         & 0.00482 & 0.00635 & -1.8   & 68.9             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Fair to good\end{tabular}                    & U         & 0.00184 & 0.00327 & -2.8   &                  \\
-                                                                            & M         & 0.00184 & 0.00251 & -1.3   & 53               \\
-                                                                            &           &         &         &        &                  \\
-Outside Maintenance: Reasonable                                                                  & U         & 0.04975 & 0.04894 & 0.4    &                  \\
-                                                                            & M         & 0.04975 & 0.05577 & -2.8   & -642             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Moderate to reasonably\end{tabular}          & U         & 0.03701 & 0.02894 & 4.5    &                  \\
-                                                                            & M         & 0.03701 & 0.04226 & -2.9   & 34.9             \\
-                                                                            &           &         &         &        &                  \\
-Outside Maintenance: Moderate                                                                    & U         & 0.80305 & 0.76088 & 10.2   &                  \\
-                                                                            & M         & 0.80305 & 0.79489 & 2      & 80.7             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Moderate to bad\end{tabular}                 & U         & 0.02887 & 0.02687 & 1.2    &                  \\
-                                                                            & M         & 0.02887 & 0.02681 & 1.3    & -3.3             \\
-                                                                            &           &         &         &        &                  \\
-Outside Maintenance: Bad                                                                         & U         & 0.07347 & 0.11811 & -15.2  &                  \\
-                                                                            & M         & 0.07347 & 0.06941 & 1.4    & 90.9             \\
-                                                                            
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Area in sq. meters\end{tabular}                       & 109.24  & 110.2   & -2.5   & 87.5     & -7.38        \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Number of Floors\end{tabular}                        & 2.2438  & 2.2271  & 1.9    & 68.7   & 6.90          \\
+                                                                        &         &         &        &                  \\
+Number of rooms &  4.3589 &  4.3715  &   -0.9  &  89.3 &  -2.80 \\
+ \\
+     Heating: Stove                                                                         & 0.01539 & 0.01818 & -1.8   & 84.4  &  -6.15            \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}  Heating: Boiler/City/Hot Air\end{tabular}                  & 0.94626 & 0.9403  & 2.4    & 76.7  & 7.74         \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}  Heating: Air conditioner/Solar collector\end{tabular}         & 0.00074 & 0.00068 & 0.2    & -29.4 & -1.17         \\
+         &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Good to excellent\end{tabular}                       & 0.00074 & 0.00108 & -1.1   & 38.7   & -3.96          \\
+                                                                                     &         &         &        &                  \\
+Inside Maintenance: Good                                                                                & 0.01245 & 0.0152  & -2.4   & 3.2  & -7.21            \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Fair to good\end{tabular}                           & 0.00453 & 0.00579 & -1.8   & -113   & -5.24            \\
+                                                                                      &         &         &        &                  \\
+Inside Maintenance: Reasonable                                                                          & 0.09328 & 0.10732 & -5.1   & 36   & -15.36             \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Moderate to reasonably\end{tabular}                 & 0.05086 & 0.05962 & -4.4   & 52.7   & -12.77          \\
+                                                                                      &         &         &        &                  \\
+Inside Maintenance: Moderate                                                                            & 0.71734 & 0.69808 & 4.2    & -44.9   &     14.68     \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Inside Maintenance: Moderate to bad\end{tabular}                        & 0.03351 & 0.0305  & 1.7    & -202.1  &   5.52         \\
+                                                                                       &         &         &        &                  \\
+Inside Maintenance: Bad                                                                                 & 0.08568 & 0.08009 & 1.8    & 88.7  &   5.24            \\
+        &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Good to excellent\end{tabular}                       & 0.00038 & 0.00065 & -1     & 56.2  &  -2.92           \\
+                                                                                      &         &         &        &                  \\
+Outside Maintenance: Good                                                                                & 0.00482 & 0.00635 & -1.8   & 68.9   & -6.95          \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Fair to good\end{tabular}                            & 0.00184 & 0.00251 & -1.3   & 53   & -5.28            \\
+                                                                                    &         &         &        &                  \\
+Outside Maintenance: Reasonable                                                                          & 0.04975 & 0.05577 & -2.8   & -642 &  -8.85            \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Moderate to reasonably\end{tabular}                   & 0.03701 & 0.04226 & -2.9   & 34.9 &  -10.54            \\
+                                                                                       &         &         &        &                  \\
+Outside Maintenance: Moderate                                                                           & 0.80305 & 0.79489 & 2      & 80.7  &  8.38           \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Outside Maintenance: Moderate to bad\end{tabular}                         & 0.02887 & 0.02681 & 1.3    & -3.3    & 4.31         \\
+                                                                                      &         &         &        &                  \\
+Outside Maintenance: Bad                                                                               & 0.07347 & 0.06941 & 1.4    & 90.9   &  3.68          \\
+             &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation:1 type\end{tabular}                                & 0.36168 & 0.37931 & -3.7   & 50.6  & -12.31           \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 2 types\end{tabular}                               & 0.12413 & 0.12439 & -0.1   & -329.7   &  0.25        \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 3 types\end{tabular}                                & 0.09591 & 0.0931  & 1      & 76.4   &  2.89          \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 4 types\end{tabular}                                 & 0.09067 & 0.08465 & 2.2    & 44    &  7.23            \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Types of isolation: 5 or more types\end{tabular}                         & 0.19407 & 0.17472 & 4.7    & 48.6  &  15.76           \\                                                                        
                                                                             
 \hline
 
@@ -1191,131 +1184,82 @@ Outside Maintenance: Bad                                                        
   \caption*{Table A4 (continued): PSM Balance check}
       \begin{tabular}{lccccc}
 \hline
-Variable                                                                    & Unmatched & Mean    &   Mean      &        &                  \\
-                                                                            & Matched   & Treated & Control & \%bias & \%bias reduction \\
+Variable                                                                   
+                                                                             & Treated & Control & \%bias & \%bias reduction & t-test \\
 \hline
-                                                                            &           &         &         &        &                  \\
-
-\begin{tabular}[c]{@{}l@{}}\end{tabular}             &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Types of isolation:1 type\end{tabular}                          & U         & 0.36168 & 0.32597 & 7.5    &                  \\
-                                                                            & M         & 0.36168 & 0.37931 & -3.7   & 50.6             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Types of isolation: 2 types\end{tabular}                         & U         & 0.12413 & 0.12419 & 0      &                  \\
-                                                                            & M         & 0.12413 & 0.12439 & -0.1   & -329.7           \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Types of isolation: 3 types\end{tabular}                         & U         & 0.09591 & 0.08399 & 4.2    &                  \\
-                                                                            & M         & 0.09591 & 0.0931  & 1      & 76.4             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Types of isolation: 4 types\end{tabular}                         & U         & 0.09067 & 0.07992 & 3.8    &                  \\
-                                                                            & M         & 0.09067 & 0.08465 & 2.2    & 44               \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Types of isolation: 5 or more types\end{tabular}                 & U         & 0.19407 & 0.2317  & -9.2   &                  \\
-                                                                            & M         & 0.19407 & 0.17472 & 4.7    & 48.6             \\
-                                                                       &           &         &         &        &                  \\
-View: Forest                                                                      & U         & 0.0183  & 0.02499 & -4.6   &                  \\
-                                                                            & M         & 0.0183  & 0.02184 & -2.4   & 47               \\
-                                                                            &           &         &         &        &                  \\
-View: Waterside                                                                   & U         & 0.06537 & 0.0825  & -6.6   &                  \\
-                                                                            & M         & 0.06537 & 0.06601 & -0.2   & 96.2             \\
-                                                                            &           &         &         &        &                  \\
-View: Park                                                                        & U         & 0.04209 & 0.0443  & -1.1   &                  \\
-                                                                            & M         & 0.04209 & 0.04189 & 0.1    & 90.9             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}View: Clear view\end{tabular}                      & U         & 0.17269 & 0.18248 & -2.6   &                  \\
-                                                                            & M         & 0.17269 & 0.17447 & -0.5   & 81.8             \\
-\begin{tabular}[c]{@{}l@{}}\end{tabular}                   &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Parking place: Only carport\end{tabular}                    & U         & 0.06285 & 0.06883 & -2.4   &                  \\
-                                                                            & M         & 0.06285 & 0.06026 & 1      & 56.8             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Parking place: Only garage\end{tabular}                     & U         & 0.04604 & 0.05317 & -3.3   &                  \\
-                                                                            & M         & 0.04604 & 0.04489 & 0.5    & 83.9             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Parking place: Garage and carport\end{tabular}              & U         & 0.17925 & 0.2212  & -10.5  &                  \\
-                                                                            & M         & 0.17925 & 0.18409 & -1.2   & 88.5             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Parking place: Garage for multiple cars\end{tabular}        & U         & 0.01438 & 0.01752 & -2.5   &                  \\
-                                                                            & M         & 0.01438 & 0.01456 & -0.1   & 94.3             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}New House\end{tabular}                       & U         & 0.00396 & 0.02565 & -18    &                  \\
-                                                                            & M         & 0.00396 & 0.00502 & -0.9   & 95.1             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Asking Price (EUR 1,000)\end{tabular}            & U         & 226.07  & 267.06  & -31.4  &                  \\
-                                                                            & M         & 226.07  & 231.13  & -3.9   & 87.7             \\                                                                      
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Located Near a Busy Street\end{tabular}      & U         & 0.02482 & 0.02996 & -3.1   &                  \\
-                                                                            & M         & 0.02482 & 0.02762 & -1.7   & 45.5             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Located in the city center\end{tabular}      & U         & 0.06758 & 0.09566 & -10.3  &                  \\
-                                                                            & M         & 0.06758 & 0.07388 & -2.3   & 77.6             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Located in the Outskirts\end{tabular}        & U         & 0.01045 & 0.02028 & -8     &                  \\
-                                                                            & M         & 0.01045 & 0.0146  & -3.4   & 57.7             \\
-\begin{tabular}[c]{@{}l@{}}:\end{tabular}           &           &         &         &        &                  \\
-Year of Construction: 1906-1930                                                                   & U         & 0.0836  & 0.11789 & -11.4  &                  \\
-                                                                            & M         & 0.0836  & 0.08932 & -1.9   & 83.3             \\
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 1931-1944                                                                   & U         & 0.05148 & 0.07844 & -11    &                  \\
-                                                                            & M         & 0.05148 & 0.05462 & -1.3   & 88.4             \\
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 1945-1959                                                                   & U         & 0.09232 & 0.07552 & 6.1    &                  \\
-                                                                            & M         & 0.09232 & 0.0961  & -1.4   & 77.4             \\
-
-\hline
-
-    \end{tabular}%
-  \label{tab:addlabel}%
-\end{table}% 
-
-
-
-
-\begin{table}[H]
-\scriptsize
-  \centering
-  \caption*{Table A4 (continued): PSM Balance check}
-      \begin{tabular}{lccccc}
-\hline
-Variable                                                                    & Unmatched & Mean    &    Mean     &        &                  \\
-                                                                            & Matched   & Treated & Control & \%bias & \%bias reduction \\
-\hline
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 1960-1970                                                                   & U         & 0.16854 & 0.1451  & 6.4    &                  \\
-                                                                            & M         & 0.16854 & 0.17175 & -0.9   & 86.3             \\
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 1971-1980                                                                   & U         & 0.18438 & 0.14627 & 10.3   &                  \\
-                                                                            & M         & 0.18438 & 0.18985 & -1.5   & 85.6             \\
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 1981-1990                                                                   & U         & 0.16316 & 0.11749 & 13.2   &                  \\
-                                                                            & M         & 0.16316 & 0.15859 & 1.3    & 90               \\
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 1991-2000                                                                   & U         & 0.1198  & 0.13123 & -3.5   &                  \\
-                                                                            & M         & 0.1198  & 0.10866 & 3.4    & 2.6              \\
-                                                                            &           &         &         &        &                  \\
-Year of Construction: 2001+                                                                       & U         & 0.10861 & 0.13359 & -7.7   &                  \\
-                                                                            & M         & 0.10861 & 0.09606 & 3.8    & 49.8             \\
-\begin{tabular}[c]{@{}l@{}}\end{tabular}                  &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Type of House: Row House\end{tabular}                       & U         & 0.30643 & 0.27366 & 7.2    &                  \\
-                                                                            & M         & 0.30643 & 0.28812 & 4      & 44.1             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Type of House: Semi-detached House\end{tabular}             & U         & 0.01873 & 0.02196 & -2.3   &                  \\
-                                                                            & M         & 0.01873 & 0.0187  & 0      & 99.2             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Type of House: Corner House\end{tabular}                    & U         & 0.12979 & 0.11638 & 4.1    &                  \\
-                                                                            & M         & 0.12979 & 0.12804 & 0.5    & 86.9             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Type of House: Half of double House\end{tabular}            & U         & 0.12899 & 0.14806 & -5.5   &                  \\
-                                                                            & M         & 0.12899 & 0.12857 & 0.1    & 97.8             \\
-                                                                            &           &         &         &        &                  \\
-\begin{tabular}[c]{@{}l@{}}Type of House: Detached House\end{tabular}                  & U         & 0.08994 & 0.13373 & -13.9  &                  \\
-                                                                            & M         & 0.08994 & 0.10768 & -5.6   & 59.5             \\
+                                                                                &         &         &        &                  \\
+View: Forest                                                                               & 0.0183  & 0.02184 & -2.4   & 47  &  -6.26              \\
+                                                                                      &         &         &        &                  \\
+View: Waterside                                                                          & 0.06537 & 0.06601 & -0.2   & 96.2 & -0.90            \\
+                                                                                      &         &         &        &                  \\
+View: Park                                                                               & 0.04209 & 0.04189 & 0.1    & 90.9 &  0.20            \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}View: Clear view\end{tabular}                               & 0.17269 & 0.17447 & -0.5   & 81.8  & -0.83            \\
+           &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Parking Lot\end{tabular}                          & 0.06285 & 0.06026 & 1      & 56.8   &  3.02           \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Only carport\end{tabular}                          & 0.04604 & 0.04489 & 0.5    & 83.9   &  1.10          \\
+                                                                                     &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Only garage\end{tabular}                                          & 0.17925 & 0.18409 & -1.2   & 88.5    &  -1.58          \\
+                                                                                    &         &         &        &                  \\
+  \begin{tabular}[c]{@{}l@{}}Parking place: Garage and carport\end{tabular} & 0.01438 & 0.01456 & -0.1   & 94.3     &   1.24 \\
+  \\
+\begin{tabular}[c]{@{}l@{}}Parking place: Garage for multiple cars\end{tabular}            
+& 0.02681 &  .03067 &   -2.2  &  56.7   & -7.20          \\
+                                                                                       &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}New House\end{tabular}                              & 0.00396 & 0.00502 & -0.9   & 95.1   & -8.57            \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Asking Price (EUR 1,000)\end{tabular}                 & 226.07  & 231.13  & -3.9   & 87.7   & -13.14           \\                                                                      
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Located Near a Busy Street\end{tabular}             & 0.02482 & 0.02762 & -1.7   & 45.5  &  -4.48          \\
+                                                                                    &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Located in the city center\end{tabular}              & 0.06758 & 0.07388 & -2.3   & 77.6  &   -6.75           \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Located in the Outskirts\end{tabular}                & 0.01045 & 0.0146  & -3.4   & 57.7   & -10.69          \\
+                   &         &         &        &                  \\
+Year of Construction: 1906-1930                                                                          & 0.0836  & 0.08932 & -1.9   & 83.3 &  -7.89              \\
+                                                                                      &         &         &        &                  \\
+Year of Construction: 1931-1944                                                                           & 0.05148 & 0.05462 & -1.3   & 88.4 & -3.47             \\
+                                                                                      &         &         &        &                  \\
+Year of Construction: 1945-1959                                                                          & 0.09232 & 0.0961  & -1.4   & 77.4  & -4.69            \\
+                                                                                    &         &         &        &                  \\
+Year of Construction: 1960-1970                                                                   
+                                                                                   & 0.16854 & 0.17175 & -0.9   & 86.3  &  -2.55           \\
+                                                                                    &         &         &        &                  \\
+Year of Construction: 1971-1980                                                                   
+                                                                                    & 0.18438 & 0.18985 & -1.5   & 85.6  &  -3.14           \\
+                                                                                      &         &         &        &                  \\
+Year of Construction: 1981-1990                                                                            
+                                                                                 & 0.16316 & 0.15859 & 1.3    & 90    &    3.70           \\
+                                                                                  &         &         &        &                  \\
+Year of Construction: 1991-2000                                                                           
+                                                                                   & 0.1198  & 0.10866 & 3.4    & 2.6   &  12.13           \\
+                                                                                     &         &         &        &                  \\
+Year of Construction: 2001+                                                                               
+                                                                                    & 0.10861 & 0.09606 & 3.8    & 49.8  &  11.54            \\
+\begin{tabular}[c]{@{}l@{}}\end{tabular}                            &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Row House\end{tabular}                  
+                                                                                & 0.30643 & 0.28812 & 4      & 44.1  &  10.34           \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Semi-detached House\end{tabular}                 & 0.01873 & 0.0187  & 0      & 99.2  &  -0.74           \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Corner House\end{tabular}                     & 0.12979 & 0.12804 & 0.5    & 86.9  &  1.65           \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Half of double House\end{tabular}                & 0.12899 & 0.12857 & 0.1    & 97.8 &  2.28            \\
+                                                                                      &         &         &        &                  \\
+\begin{tabular}[c]{@{}l@{}}Type of House: Detached House\end{tabular}                      & 0.08994 & 0.10768 & -5.6   & 59.5  &  -18.38            \\
 \hline
 \end{tabular}
 \begin{tablenotes}
 \scriptsize
-\item \textit{Notes:} This table reports the balance before and after matching for the PSM estimation results reported in Table 2 column 4. These statistics indicate a reduction of the bias in most of the covariates used for the PSM, pointing to an increase in the balance of the covariates after matching.
+\item \textit{Notes:} This table reports the balance before and after matching for the PSM estimation results reported in Table 2 column 4. \added{\textbf{Column 3 and 4 show the mean of the treted and control group after matching respectively.}} These statistics indicate a reduction of the bias in most of the covariates used for the PSM, pointing to an increase in the balance of the covariates after matching. \added{\textbf{While some of the t-test for mean equality for some of the variables are statistically significant, Rubin's B and R are 16.9 and 0.86 which fall inside the parameters for the sample to be considered balanced, see \cite{rubin2001using}}} 
 \end{tablenotes}
 
-\end{table}
+
+
+  \label{tab:addlabel}%
+\end{table}% 
+
 
 
 
